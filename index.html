@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>witdor——纬度空间官网</title>
+    <link rel="icon" href="images/logo.png"/>
+    <link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.2/css/bootstrap.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <link href=".{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
+    {% } %}
+</head>
+<body>
+
+<div class="container">
+    <aries></aries>
+</div>
+
+<script src="common.js"></script>
+<script src="vendor.js"></script>
+<script src="bundle.js"></script>
+</body>
+</html>
