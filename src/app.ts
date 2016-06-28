@@ -7,8 +7,6 @@ import { ROUTER_PROVIDERS } from '@angular/router';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { BasicComponent } from './component/Demo/Basic';
 
-require('./static/images/logo.png');
-
 @Component({
     selector: 'aries',
     directives: [
