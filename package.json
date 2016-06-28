@@ -1,7 +1,7 @@
 {
-  "name": "Aries",
+  "name": "Taurus",
   "version": "1.0.0",
-  "description": "纬度空间官网",
+  "description": "纬度空间后台",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
