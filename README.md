@@ -7,9 +7,9 @@
 ### 2. 安装typescript编译工具
 `npm install -g typings`
 ### 3.  安装依赖
-`npm install && typings install`
+`npm install`
 #### 3.1. 如果发现node-sass安装失败 再执行一次 `npm install node-sass`，不报错就可以了。这源自于天朝的牛逼墙
 ### 4. 运行项目
 `npm run start`
 ### 5. 访问项目
-`http://localhost:8080`
+`http://localhost:3000`
