@@ -1,4 +1,4 @@
 export * from './App';
 export * from './dashboard/index';
-export * from './demo/Basic';
-export * from './demo2/Basic';
+export * from './dashboard/demo/Basic';
+export * from './dashboard/demo2/Basic';
