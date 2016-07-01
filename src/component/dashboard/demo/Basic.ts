@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { UserModel } from './../../model/index';
+
+import { UserModel } from './../../../model/index';
 
 let xiaomo:UserModel = new UserModel( 'xiaomo');
 let xiaoming:UserModel = new UserModel('xiaoming');
