@@ -59,5 +59,5 @@
 ### 20. 坚持 实现生命周期钩子接口。 `import OnInit from '@angular/core'`   `export class xxx implements OnInit`
 
 ## 四、结尾
-看到这里了?我们一起来愉快的擼angular2吧。happy ending!!!   
+看到这里了?我们一起来愉快的擼angular2吧。对了，在这之前你需要建立一个自己的分支。happy ending!!!   
                                                                                             2016.7.1 01:10  小莫

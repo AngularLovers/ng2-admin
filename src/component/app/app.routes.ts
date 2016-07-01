@@ -1,6 +1,5 @@
-import {provideRouter, RouterConfig} from '@angular/router';
-import { BasicComponent } from './component/Demo/Basic';
-import { BasicComponent2 } from './component/Demo2/Basic';
+import { provideRouter, RouterConfig } from '@angular/router';
+import { BasicComponent,BasicComponent2 } from './../index';
 
 export const routes:RouterConfig = [
     {path: '', component: BasicComponent},

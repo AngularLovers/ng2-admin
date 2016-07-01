@@ -2,9 +2,9 @@
 import 'core-js/es6';
 import 'core-js/es6';
 import 'core-js/es7/reflect';
-
 import 'zone.js/dist/zone';
 import 'zone.js/dist/long-stack-trace-zone';
+import 'ts-helpers';
 
 // Angular 2
 import '@angular/platform-browser-dynamic';
@@ -15,3 +15,11 @@ import '@angular/http';
 
 // RxJS
 import 'rxjs';
+
+// Web dependencies
+import 'jquery';
+import 'bootstrap-loader';
+import 'font-awesome-sass-loader';
+import 'lodash';
+
+
