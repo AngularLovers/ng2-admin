@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var WebpackNotifierPlugin = require('webpack-notifier');
 
 const METADATA = {
   title: '维度空间后台管理系统',
@@ -212,8 +213,12 @@ module.exports = {
      * See: https://www.npmjs.com/package/copy-webpack-plugin
      */
     new CopyWebpackPlugin([{
-      from: 'src/assets',
+      from: 'src/assets'
     }]),
+
+    new WebpackNotifierPlugin({
+      title: 'Tarus-纬度空间后台管理系统'
+    }),
 
     /*
      * Plugin: HtmlWebpackPlugin
