@@ -1,7 +1,7 @@
 import { Component,ViewEncapsulation } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
-import './app.loader.ts';
+import './sspp.loader.ts';
 import {BaImageLoaderService, BaThemePreloader, BaThemeSpinner} from '../service/index.ts';
 
 @Component({
