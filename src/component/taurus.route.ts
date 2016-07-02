@@ -1,9 +1,9 @@
 import { provideRouter, RouterConfig } from '@angular/router';
-import { BasicComponent,TodoComponent } from './index';
+import { BasicComponent,TodoComponent,BaBackTopComponent } from './index';
 
 export const routes:RouterConfig = [
     {path: 'dashboard', component: BasicComponent},
-    {path: 'wdSpace', component: TodoComponent},
+    {path: 'wdSpace', component: BaBackTopComponent},
     {path: 'allConcat', component: BasicComponent},
     {path: '**', redirectTo: 'dashboard'},
 ];

@@ -5,4 +5,3 @@
 // export * from './priceAdvice/index'; // 报价咨询
 // export * from './projectProcess/index'; // 项目流程
 // export * from './vocationNews/index'; // 技术动态
-export * from '../dashboard/index';  // 首页面板
