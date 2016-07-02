@@ -1,4 +1,4 @@
 export * from './App';
-export * from './dashboard/index';
-export * from './dashboard/demo/Basic';
-export * from './dashboard/demo2/Basic';
+export * from './wdSpace/dashboard/index';
+export * from './wdSpace/dashboard/demo/Basic';
+export * from './wdSpace/dashboard/demo2/Basic';

@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from "@angular/core";
-import { TodoService } from "./../../../service/index";
+import { TodoService } from "./../../../../service/index";
 
 @Component({
     selector: 'todo',

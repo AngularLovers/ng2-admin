@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var index_1 = require('./../../../model/index');
+var index_1 = require('./../../../../model/index');
 var xiaomo = new index_1.UserModel('我是组件2');
 var xiaoming = new index_1.UserModel('测试admin路由');
 var BasicComponent2 = (function () {

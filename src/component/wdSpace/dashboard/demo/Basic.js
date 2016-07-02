@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var index_1 = require('./../../../model/index');
+var index_1 = require('./../../../../model/index');
 var xiaomo = new index_1.UserModel('xiaomo');
 var xiaoming = new index_1.UserModel('xiaoming');
 var BasicComponent = (function () {
