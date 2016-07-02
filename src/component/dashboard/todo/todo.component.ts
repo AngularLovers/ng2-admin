@@ -5,7 +5,7 @@ import { TodoService } from "./../../../service/index";
     selector: 'todo',
     encapsulation: ViewEncapsulation.None,
     providers: [TodoService],
-    styles: [require('./todo.scss')],
+    // styles: [require('./todo.scss')],
     template: require('./todo.html')
 })
 export class TodoComponent {
