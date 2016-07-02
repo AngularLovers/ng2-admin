@@ -3,14 +3,8 @@ import { BasicComponent,TodoComponent } from './index';
 
 export const routes:RouterConfig = [
     {path: 'dashboard', component: BasicComponent},
-    {path: 'index', component: TodoComponent},
-    {path: 'aboutGroup', component: BasicComponent},
-    {path: 'vocationNews', component: TodoComponent},
-    {path: 'priceAdvice', component: BasicComponent},
-    {path: 'projectProcess', component: TodoComponent},
-    {path: 'goodJobs', component: BasicComponent},
-    {path: 'suggestions', component: TodoComponent},
-    {path: 'aboutUs', component: BasicComponent},
+    {path: 'wdSpace', component: TodoComponent},
+    {path: 'allConcat', component: BasicComponent},
     {path: '**', redirectTo: 'dashboard'},
 ];
 
