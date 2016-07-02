@@ -37,8 +37,9 @@ var TodoComponent = (function () {
             styles: [require('./Todo.scss')],
             template: require('./Todo.html')
         }), 
-        __metadata('design:paramtypes', [index_1.TodoService])
+        __metadata('design:paramtypes', [(typeof (_a = typeof index_1.TodoService !== 'undefined' && index_1.TodoService) === 'function' && _a) || Object])
     ], TodoComponent);
     return TodoComponent;
+    var _a;
 }());
 exports.TodoComponent = TodoComponent;
