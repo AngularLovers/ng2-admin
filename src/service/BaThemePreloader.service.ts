@@ -15,11 +15,11 @@ export class BaThemePreloader {
 
   public static load():Promise<any> {
     return new Promise((resolve, reject) => {
-      BaThemePreloader._executeAll(resolve);
+      BaThemePreloader.executeAll(resolve);
     });
   }
- 
-  private static _executeAll(done:Function):void {
+
+  private static executeAll(done:Function):void {
     setTimeout(() => {
       Promise.all(BaThemePreloader._loaders).then((values) => {
         done.call(null, values);
