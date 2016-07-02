@@ -7,11 +7,11 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 @Component({
     selector: 'taurus',
     encapsulation: ViewEncapsulation.None,
-    styles: [require('normalize.css'), require('./taurus.scss')],
+    styles: [require('normalize.css'), require('./app.scss')],
     directives: [
         ROUTER_DIRECTIVES
     ],
-    template: require('./taurus.html')
+    template: require('./app.html')
 })
 
 export class AppComponent {

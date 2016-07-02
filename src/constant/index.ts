@@ -1,1 +1,1 @@
-export * from './apiConst';
+export * from './api';
