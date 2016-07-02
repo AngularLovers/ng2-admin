@@ -1,12 +1,12 @@
 import { Component, ViewEncapsulation } from "@angular/core";
-import { TodoService } from "./../../../../service/index";
+import { TodoService } from "./../../../service/index";
 
 @Component({
     selector: 'todo',
     encapsulation: ViewEncapsulation.None,
     providers: [TodoService],
-    styles: [require('./Todo.scss')],
-    template: require('./Todo.html')
+    styles: [require('./todo.scss')],
+    template: require('./todo.html')
 })
 export class TodoComponent {
 

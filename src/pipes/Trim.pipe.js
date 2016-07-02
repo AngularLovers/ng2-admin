@@ -9,22 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var index_1 = require('./../../../../model/index');
-var xiaomo = new index_1.UserModel('我是组件2');
-var xiaoming = new index_1.UserModel('测试admin路由');
-var BasicComponent2 = (function () {
-    function BasicComponent2() {
-        this.users = [xiaomo, xiaoming];
+var TrimPipe = (function () {
+    function TrimPipe() {
     }
-    ;
-    BasicComponent2 = __decorate([
-        core_1.Component({
-            selector: 'basic',
-            styles: [require('./Basic.scss')],
-            template: require('./Basic.html')
-        }), 
+    TrimPipe.prototype.transform = function (value, args) {
+        return value.trim();
+    };
+    TrimPipe = __decorate([
+        core_1.Pipe({ name: 'trim' }), 
         __metadata('design:paramtypes', [])
-    ], BasicComponent2);
-    return BasicComponent2;
+    ], TrimPipe);
+    return TrimPipe;
 }());
-exports.BasicComponent2 = BasicComponent2;
+exports.TrimPipe = TrimPipe;

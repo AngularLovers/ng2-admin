@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
-import { UserModel } from './../../../../model/index';
+import { UserModel } from './../../../model/index';
 
 let xiaomo:UserModel = new UserModel( 'xiaomo');
 let xiaoming:UserModel = new UserModel('xiaoming');
 
 @Component({
     selector: 'basic',
-    styles:[require('./Basic.scss')],
-    template: require('./Basic.html')
+    styles:[require('./basic.scss')],
+    template: require('./basic.html')
 })
 
 export class BasicComponent {
