@@ -1,1 +1,1 @@
-export * from './trim.pipe';
+export * from './trimStr.pipe.ts';
