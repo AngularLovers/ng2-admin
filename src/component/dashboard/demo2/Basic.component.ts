@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserModel } from './../../../../model/index';
+import { UserModel } from './../../../model/index';
 
 let xiaomo:UserModel = new UserModel( '我是组件2');
 let xiaoming:UserModel = new UserModel('测试admin路由');
