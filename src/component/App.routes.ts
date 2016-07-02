@@ -2,15 +2,19 @@ import { provideRouter, RouterConfig } from '@angular/router';
 import { BasicComponent,TodoComponent } from './index';
 
 export const routes:RouterConfig = [
-    {path: '', component: BasicComponent},
-    {path: 'admin', component: TodoComponent},
-    {path: 'user', component: BasicComponent},
-    {path: 'tag', component: TodoComponent},
-    {path: 'changeLog', component: BasicComponent},
-    {path: 'goodBlog', component: TodoComponent},
-    {path: 'goodPlugin', component: BasicComponent},
-    {path: 'friendLink', component: TodoComponent},
-    {path: 'systemSet', component: BasicComponent},
+    {path: 'dashboard', component: BasicComponent},
+    {path: 'index', component: TodoComponent},
+    {path: 'aboutGroup', component: BasicComponent},
+    {path: 'vocationNews', component: TodoComponent},
+    {path: 'suggestions', component: BasicComponent},
+    {path: 'concatUs', component: TodoComponent},
+    {path: 'priceAdvice', component: BasicComponent},
+    {path: 'suggestions', component: TodoComponent},
+    {path: 'projectProcess', component: TodoComponent},
+    {path: 'goodJobs', component: BasicComponent},
+    {path: 'aboutUs', component: BasicComponent},
+    {path: 'systemSet', component: TodoComponent},
+    {path: '**', redirectTo: 'dashboard'},
 ];
 
 export const APP_ROUTER_PROVIDERS:any = [
