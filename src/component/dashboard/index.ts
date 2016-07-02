@@ -1,4 +1,4 @@
 // 主页面板
-export * from './todo/Todo.component'
-export * from './demo/Basic.component'
+export * from './todo/todo.component'
+export * from './demo/basic.component'
 export * from './demo2/Basic.component'
