@@ -5,11 +5,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var WebpackNotifierPlugin = require('webpack-notifier');
 
 const METADATA = {
-  title: '维度空间后台管理系统',
-  description: '维度空间后台管理系统',
+  title: 'ng2-admin - Angular 2 Admin Template',
+  description: 'Free Angular 2 and Bootstrap 4 Admin Template',
   baseUrl: '/'
 };
 
@@ -32,8 +31,10 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#entry
    */
   entry: {
+
+    'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
-    'main': './src/main.ts'
+    'main': './src/main.browser.ts'
 
   },
 
@@ -55,7 +56,7 @@ module.exports = {
     root: helpers.root('src'),
 
     // remove other default values
-    modulesDirectories: ['node_modules']
+    modulesDirectories: ['node_modules', 'bower_components']
 
   },
 
@@ -174,6 +175,10 @@ module.exports = {
       allChunks: true
     }),
 
+    new webpack.ResolverPlugin(
+      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
+    ),
+
     /*
      * Plugin: ForkCheckerPlugin
      * Description: Do type checking in a separate process, so webpack don't need to wait.
@@ -201,7 +206,7 @@ module.exports = {
      * See: https://github.com/webpack/docs/wiki/optimization#multi-page-app
      */
     new webpack.optimize.CommonsChunkPlugin({
-      name: helpers.reverse(['vendor'])
+      name: helpers.reverse(['polyfills', 'vendor'])
     }),
 
     /*
@@ -213,12 +218,9 @@ module.exports = {
      * See: https://www.npmjs.com/package/copy-webpack-plugin
      */
     new CopyWebpackPlugin([{
-      from: 'src/assets'
+      from: 'src/assets',
+      to: 'assets'
     }]),
-
-    new WebpackNotifierPlugin({
-      title: 'Tarus-纬度空间后台管理系统'
-    }),
 
     /*
      * Plugin: HtmlWebpackPlugin
@@ -229,8 +231,8 @@ module.exports = {
      * See: https://github.com/ampedandwired/html-webpack-plugin
      */
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      chunksSortMode: helpers.packageSort(['vendor', 'main'])
+      template: 'src/index.html',
+      chunksSortMode: helpers.packageSort(['polyfills', 'vendor', 'main'])
     }),
 
     // TODO: make sure this is a correct configuration

@@ -2,26 +2,18 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "declaration": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "noLib": false,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noEmitHelpers": true
   },
-  "filesGlob": [
-    "./**/*.ts",
-    "./test/**/*.ts",
-    "!./node_modules/**/*.ts",
-    "!./tmp/*.ts"
-  ],
-  "compileOnSave": true,
-  "buildOnSave": true,
-  "atom": { "rewriteTsconfig": false },
   "exclude": [
-    "typings/main.d.ts",
-    "typings/main",
-    "node_modules",
-    "tmp"
-  ]
+    "node_modules"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": { "rewriteTsconfig": false }
 }

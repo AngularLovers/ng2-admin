@@ -34,7 +34,7 @@ function prependExt(extensions, args) {
 }
 
 function packageSort(packages) {
-  // packages = [ 'vendor', 'main']
+  // packages = ['polyfills', 'vendor', 'main']
   var len = packages.length - 1;
   var first = packages[0];
   var last = packages[len];
