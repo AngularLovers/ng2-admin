@@ -1,6 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {BaCard} from '../../../../theme/components';
-import {BaAmChart} from '../../../../theme/components';
 
 import {BubbleMapsService} from "./bubbleMaps.service";
 
@@ -9,7 +8,7 @@ import {BubbleMapsService} from "./bubbleMaps.service";
   pipes: [],
   providers: [BubbleMapsService],
   encapsulation: ViewEncapsulation.None,
-  directives: [BaCard, BaAmChart],
+  directives: [BaCard],
   styles: [require('./bubbleMaps.scss')],
   template: require('./bubbleMaps.html'),
 })

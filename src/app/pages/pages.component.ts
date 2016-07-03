@@ -5,7 +5,6 @@ import {BaPageTop, BaContentTop, BaSidebar, BaBackTop} from '../theme/components
 
 import {Dashboard} from './dashboard';
 import {Ui} from './ui';
-import {Maps} from './maps';
 import {Charts} from './charts';
 import {Forms} from './forms';
 import {Tables} from './tables';
@@ -56,11 +55,6 @@ import {Editors} from "./editors";
     name: 'Ui',
     component: Ui,
     path: '/ui/...',
-  },
-  {
-    name: 'Maps',
-    component: Maps,
-    path: '/maps/...',
   },
   {
     name: 'Charts',

@@ -1,5 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import {BaCard, BaAmChart} from '../../../../theme/components';
+import {BaCard} from '../../../../theme/components';
 
 import {LineMapsService} from './lineMaps.service';
 
@@ -10,7 +10,7 @@ import {LineMapsService} from './lineMaps.service';
   encapsulation: ViewEncapsulation.None,
   styles: [require('./lineMaps.scss')],
   template: require('./lineMaps.html'),
-  directives: [BaCard, BaAmChart],
+  directives: [BaCard],
 })
 export class LineMaps {
 

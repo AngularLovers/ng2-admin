@@ -20,20 +20,6 @@ export const menuItems = [
     ]
   },
   {
-    title: 'Charts',
-    component: 'Charts',
-    icon: 'ion-stats-bars',
-    selected: false,
-    expanded: false,
-    order: 200,
-    subMenu: [
-      {
-        title: 'Chartist.Js',
-        component: 'ChartistJs',
-      },
-    ]
-  },
-  {
     title: 'UI Features',
     component: 'Ui',
     icon: 'ion-android-laptop',
@@ -92,32 +78,6 @@ export const menuItems = [
     ]
   },
   {
-    title: 'Maps',
-    component: 'Maps',
-    icon: 'ion-ios-location-outline',
-    selected: false,
-    expanded: false,
-    order: 600,
-    subMenu: [
-      {
-        title: 'Google Maps',
-        component: 'GoogleMaps',
-      },
-      {
-        title: 'Leaflet Maps',
-        component: 'LeafletMaps',
-      },
-      {
-        title: 'Bubble Maps',
-        component: 'BubbleMaps',
-      },
-      {
-        title: 'Line Maps',
-        component: 'LineMaps',
-      }
-    ]
-  },
-  {
     title: 'Pages',
     icon: 'ion-document',
     selected: false,
@@ -128,10 +88,6 @@ export const menuItems = [
         title: 'Login',
         url: '#/login',
       },
-      {
-        title: 'Register',
-        url: '#/register',
-      }
     ]
   },
   {
