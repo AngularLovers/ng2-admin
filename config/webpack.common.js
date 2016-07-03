@@ -7,8 +7,8 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const METADATA = {
-  title: 'ng2-admin - Angular 2 Admin Template',
-  description: 'Free Angular 2 and Bootstrap 4 Admin Template',
+  title: '维度空间后台管理系统',
+  description: '只做专业的',
   baseUrl: '/'
 };
 

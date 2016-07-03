@@ -1,6 +1,6 @@
 export const menuItems = [
   {
-    title: 'Dashboard',
+    title: '主面板',
     component: 'Dashboard',
     icon: 'ion-android-home',
     selected: false,
@@ -8,19 +8,19 @@ export const menuItems = [
     order: 0
   },
   {
-    title: 'Editors',
+    title: '编辑器',
     component: 'Editors',
     icon: 'ion-edit',
     order: 100,
     subMenu: [
       {
-        title: 'CKEditor',
+        title: '编辑器',
         component: 'Ckeditor'
       }
     ]
   },
   {
-    title: 'UI Features',
+    title: 'UI特征',
     component: 'Ui',
     icon: 'ion-android-laptop',
     selected: false,
@@ -28,25 +28,25 @@ export const menuItems = [
     order: 300,
     subMenu: [
       {
-        title: 'Typography',
+        title: '文字排版',
         component: 'Typography',
       },
       {
-        title: 'Buttons',
+        title: '按钮',
         component: 'Buttons',
       },
       {
-        title: 'Icons',
+        title: '图标',
         component: 'Icons',
       },
       {
-        title: 'Grid',
+        title: '栅格布局',
         component: 'Grid',
       },
     ]
   },
   {
-    title: 'Form Elements',
+    title: '表单元素',
     component: 'Forms',
     icon: 'ion-compose',
     selected: false,
@@ -54,17 +54,17 @@ export const menuItems = [
     order: 400,
     subMenu: [
       {
-        title: 'Form Inputs',
+        title: '表单输入',
         component: 'Inputs',
       },
       {
-        title: 'Form Layouts',
+        title: '表单布局',
         component: 'Layouts',
       },
     ]
   },
   {
-    title: 'Tables',
+    title: '表格',
     component: 'Tables',
     icon: 'ion-grid',
     selected: false,
@@ -72,43 +72,70 @@ export const menuItems = [
     order: 500,
     subMenu: [
       {
-        title: 'Basic Tables',
+        title: '基本表格',
         component: 'BasicTables',
       }
     ]
   },
   {
-    title: 'Pages',
+    title: '页面',
     icon: 'ion-document',
     selected: false,
     expanded: false,
     order: 650,
     subMenu: [
       {
-        title: 'Login',
+        title: '登陆',
         url: '#/login',
       },
     ]
   },
   {
-    title: 'Menu Level 1',
+    title: '一级菜单',
     icon: 'ion-ios-more',
     selected: false,
     expanded: false,
     order: 700,
     subMenu: [
       {
-        title: 'Menu Level 1.1',
+        title: '二级菜单1',
+        url: '#', subMenu: [{
+        title: '三级菜单1',
         url: '#',
         disabled: true,
         selected: false,
         expanded: false
+      },{
+        title: '三级菜单2',
+        url: '#',
+        disabled: true,
+        selected: false,
+        expanded: false
+      },{
+        title: '三级菜单3',
+        url: '#',
+        disabled: true,
+        selected: false,
+        expanded: false
+      }]
       },
       {
-        title: 'Menu Level 1.2',
+        title: '二级菜单2',
         url: '#',
         subMenu: [{
-          title: 'Menu Level 1.2.1',
+          title: '三级菜单1',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        },{
+          title: '三级菜单2',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        },{
+          title: '三级菜单3',
           url: '#',
           disabled: true,
           selected: false,
@@ -118,8 +145,8 @@ export const menuItems = [
     ]
   },
   {
-    title: 'External Link',
-    url: 'http://akveo.com',
+    title: '额外链接',
+    url: 'http://witdor.com',
     icon: 'ion-android-exit',
     selected: false,
     expanded: false,
