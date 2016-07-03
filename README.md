@@ -40,4 +40,4 @@ E:\oscchina\Taurus>npm -v
 ### 6. 运行项目
 `npm run start`
 ### 7. 访问项目
-`http://localhost:3000`
+`http://localhost:3333`
