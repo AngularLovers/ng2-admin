@@ -7,7 +7,7 @@ export class BaThemeSpinner {
   private element:HTMLElement;
 
   constructor() {
-    this.element = document.getElementById(this._selector);
+    this.element = document.getElementById(this.selector);
   }
 
   public show():void {
