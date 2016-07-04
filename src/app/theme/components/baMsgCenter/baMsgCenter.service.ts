@@ -3,15 +3,15 @@ import {Injectable} from '@angular/core'
 @Injectable()
 export class BaMsgCenterService {
 
-  private _notifications = [
+  private notifications = [
     {
       name: 'Vlad',
-      text: 'Vlad posted a new article.',
+      text: '大家好，我是小莫.',
       time: '1 min ago'
     },
     {
       name: 'Kostya',
-      text: 'Kostya changed his contact information.',
+      text: '我是Alice,萌妹子.',
       time: '2 hrs ago'
     },
     {
@@ -21,12 +21,12 @@ export class BaMsgCenterService {
     },
     {
       name: 'Andrey',
-      text: 'Andrey replied to your comment.',
+      text: '龙猫，UI设计师..',
       time: '1 day ago'
     },
     {
       name: 'Nasta',
-      text: 'Today is Nasta\'s birthday.',
+      text: '牛茜，官网UI设计师',
       time: '2 days ago'
     },
     {
@@ -36,25 +36,25 @@ export class BaMsgCenterService {
     },
     {
       name: 'Kostya',
-      text: 'Kostya invited you to join the event.',
+      text: '胡旭，后端架构师.',
       time: '1 week ago'
     }
   ];
 
-  private _messages = [
+  private messages = [
     {
       name: 'Nasta',
-      text: 'After you get up and running, you can place Font Awesome icons just about...',
+      text: '当你启动之后，你可以看到Font Awesome的一些图标.',
       time: '1 min ago'
     },
     {
       name: 'Vlad',
-      text: 'You asked, Font Awesome delivers with 40 shiny new icons in version 4.2.',
+      text: '现在最新的Font Awesome的版本是4.2.',
       time: '2 hrs ago'
     },
     {
       name: 'Kostya',
-      text: 'Want to request new icons? Here\'s how. Need vectors or want to use on the...',
+      text: '如果你想用新图标，你也可以去到Font Awesome官网找一找.',
       time: '10 hrs ago'
     },
     {
@@ -62,28 +62,13 @@ export class BaMsgCenterService {
       text: 'Explore your passions and discover new ones by getting involved. Stretch your...',
       time: '1 day ago'
     },
-    {
-      name: 'Nasta',
-      text: 'Get to know who we are - from the inside out. From our history and culture, to the...',
-      time: '1 day ago'
-    },
-    {
-      name: 'Kostya',
-      text: 'Need some support to reach your goals? Apply for scholarships across a variety of...',
-      time: '2 days ago'
-    },
-    {
-      name: 'Vlad',
-      text: 'Wrap the dropdown\'s trigger and the dropdown menu within .dropdown, or...',
-      time: '1 week ago'
-    }
   ];
 
   public getMessages():Array<Object> {
-    return this._messages;
+    return this.messages;
   }
 
   public getNotifications():Array<Object> {
-    return this._notifications;
+    return this.notifications;
   }
 }
