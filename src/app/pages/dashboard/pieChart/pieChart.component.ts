@@ -17,21 +17,21 @@ import './pieChart.loader.ts';
 export class PieChart {
 
   public charts: Array<Object>;
-  private _init = false;
+  private init = false;
 
-  constructor(private _pieChartService: PieChartService) {
-    this.charts = this._pieChartService.getData();
+  constructor(private pieChartService: PieChartService) {
+    this.charts = this.pieChartService.getData();
   }
 
   ngAfterViewInit() {
-    if (!this._init) {
-      this._loadPieCharts();
-      this._updatePieCharts();
-      this._init = true;
+    if (!this.init) {
+      this.loadPieCharts();
+      this.updatePieCharts();
+      this.init = true;
     }
   }
 
-  private _loadPieCharts() {
+  private loadPieCharts() {
 
     jQuery('.chart').each(function () {
       let chart = jQuery(this);
@@ -51,7 +51,7 @@ export class PieChart {
     });
   }
 
-  private _updatePieCharts() {
+  private updatePieCharts() {
     let getRandomArbitrary = (min, max) => { return Math.random() * (max - min) + min };
 
     jQuery('.pie-charts .chart').each(function(index, chart) {

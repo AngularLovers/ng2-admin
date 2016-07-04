@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
-import {BaAppPicturePipe} from './../../../../pipes/index';
-import {BasicTablesService} from './../../../../services/basicTables.service';
+import { BaAppPicturePipe } from './../../../../pipes/index';
+import { BasicTablesService } from './../../../../../../app/pages/tables/components/basicTables/basicTables.service';
 
 @Component({
   selector: 'bordered-table',

@@ -1,8 +1,8 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
-import { BasicTablesService } from './../../../../theme/services/index'
+import { BasicTablesService } from './basicTables.service'
 
-import {BaCard ,HoverTable,BorderedTable,CondensedTable,StripedTable,ContextualTable,ResponsiveTable} from './../../../../theme/components/index';
+import { BaCard ,HoverTable,BorderedTable,CondensedTable,StripedTable,ContextualTable,ResponsiveTable } from './../../../../theme/components/index';
 
 @Component({
   selector: 'basic-tables',

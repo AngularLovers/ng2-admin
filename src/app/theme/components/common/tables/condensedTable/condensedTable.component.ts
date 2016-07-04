@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 import {BaAppPicturePipe} from './../../../../pipes/index';
-import {BasicTablesService} from './../../../../services/basicTables.service';
+import { BasicTablesService } from './../../../../../../app/pages/tables/components/basicTables/basicTables.service';
 
 @Component({
   selector: 'condensed-table',
@@ -12,7 +12,7 @@ export class CondensedTable {
 
   peopleTableData:Array<any>;
 
-  constructor(private _basicTablesService: BasicTablesService) {
-    this.peopleTableData = _basicTablesService.peopleTableData;
+  constructor(private basicTablesService: BasicTablesService) {
+    this.peopleTableData = basicTablesService.peopleTableData;
   }
 }

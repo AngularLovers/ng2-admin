@@ -21,10 +21,10 @@ export class TrafficChart {
   }
 
   ngAfterViewInit() {
-    this._loadDoughnutCharts();
+    this.loadDoughnutCharts();
   }
 
-  private _loadDoughnutCharts() {
+  private loadDoughnutCharts() {
     let el = jQuery('.chart-area').get(0);
     new Chart(el.getContext('2d')).Doughnut(this.doughnutData, {
       segmentShowStroke: false,
