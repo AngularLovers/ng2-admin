@@ -1,3 +1,4 @@
+export * from './common/index'
 export * from './baPageTop';
 export * from './baMsgCenter';
 export * from './baSidebar';

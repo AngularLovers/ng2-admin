@@ -1,12 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
-import {BaCard} from '../../../../theme/components';
-
-import {InlineForm} from './components/inlineForm';
-import {BlockForm} from './components/blockForm';
-import {HorizontalForm} from './components/horizontalForm';
-import {BasicForm} from './components/basicForm';
-import {WithoutLabelsForm} from './components/withoutLabelsForm';
+import {BaCard,InlineForm,BlockForm,HorizontalForm ,BasicForm ,WithoutLabelsForm} from '../../../../theme/components/index';
 
 @Component({
   selector: 'layouts',
