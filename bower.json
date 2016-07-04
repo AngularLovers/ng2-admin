@@ -1,9 +1,9 @@
 {
-  "name": "ng2-admin",
+  "name": "Taurus",
   "version": "0.0.1",
-  "description": "Angular 2 and Bootstrap 4 Admin Template.",
+  "description": "维度空间官网.",
   "author": "akveo",
-  "homepage": "http://akveo.github.io/ng2-admin/",
+  "homepage": "http://git.oschina.net/WDSpace/Taurus",
   "license": "MIT",
   "moduleType": [
     "es6"
