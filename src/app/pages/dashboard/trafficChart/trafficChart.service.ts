@@ -4,46 +4,46 @@ import {BaThemeConfigProvider, colorHelper} from '../../../theme';
 @Injectable()
 export class TrafficChartService {
 
-  constructor(private _baConfig:BaThemeConfigProvider) {
+  constructor(private baConfig:BaThemeConfigProvider) {
   }
 
 
   getData() {
-    let dashboardColors = this._baConfig.get().colors.dashboard;
+    let dashboardColors = this.baConfig.get().colors.dashboard;
     return [
       {
         value: 2000,
         color: dashboardColors.white,
         highlight: colorHelper.shade(dashboardColors.white, 15),
-        label: 'Other',
+        label: '其他',
         percentage: 87,
         order: 1,
       }, {
         value: 1500,
         color: dashboardColors.gossip,
         highlight: colorHelper.shade(dashboardColors.gossip, 15),
-        label: 'Search engines',
+        label: '搜索引擎',
         percentage: 22,
         order: 4,
       }, {
         value: 1000,
         color: dashboardColors.silverTree,
         highlight: colorHelper.shade(dashboardColors.silverTree, 15),
-        label: 'Referral Traffic',
+        label: '推荐流量',
         percentage: 70,
         order: 3,
       }, {
         value: 1200,
         color: dashboardColors.surfieGreen,
         highlight: colorHelper.shade(dashboardColors.surfieGreen, 15),
-        label: 'Direct Traffic',
+        label: '异常流量',
         percentage: 38,
         order: 2,
       }, {
         value: 400,
         color: dashboardColors.blueStone,
         highlight: colorHelper.shade(dashboardColors.blueStone, 15),
-        label: 'Ad Campaigns',
+        label: '广告宣传',
         percentage: 17,
         order: 0,
       },
