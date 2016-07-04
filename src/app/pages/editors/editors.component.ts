@@ -1,11 +1,11 @@
-import {Component} from '@angular/core';
-import {RouteConfig} from '@angular/router-deprecated';
+import { Component } from '@angular/core';
+import { RouteConfig } from '@angular/router-deprecated';
 
-import {Ckeditor} from "./components/ckeditor";
+import { Ckeditor } from "../../theme/components/common/editor/index";
 
 @Component({
   selector: 'editors',
-  template: `<router-outlet></router-outlet>`
+  template: require('./editors.html')
 })
 
 @RouteConfig([

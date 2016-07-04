@@ -4,11 +4,11 @@ import {BaThemeConfigProvider, colorHelper} from '../../../theme';
 @Injectable()
 export class PieChartService {
 
-  constructor(private _baConfig:BaThemeConfigProvider) {
+  constructor(private baConfig:BaThemeConfigProvider) {
   }
 
   getData() {
-    let pieColor = this._baConfig.get().colors.custom.dashboardPieChart;
+    let pieColor = this.baConfig.get().colors.custom.dashboardPieChart;
     return [
       {
         color: pieColor,

@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {RouteConfig} from '@angular/router-deprecated';
+import { Component } from '@angular/core';
+import { RouteConfig } from '@angular/router-deprecated';
 
-import {BasicTables} from './components/basicTables';
+import { BasicTables } from './components/basicTables';
 
 @Component({
   selector: 'forms',

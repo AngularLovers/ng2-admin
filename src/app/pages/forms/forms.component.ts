@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {RouteConfig} from '@angular/router-deprecated';
 
-import {Inputs} from './components/inputs';
-import {Layouts} from './components/layouts';
+import { Inputs } from './components/inputs';
+import { Layouts } from './components/layouts';
 
 @Component({
   selector: 'forms',
