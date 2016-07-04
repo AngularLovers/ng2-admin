@@ -15,18 +15,18 @@ export class Feed {
 
   public feed:Array<Object>;
 
-  constructor(private _feedService:FeedService) {
+  constructor(private feedService:FeedService) {
   }
 
   ngOnInit() {
-    this._loadFeed();
+    this.loadFeed();
   }
 
   expandMessage (message){
     message.expanded = !message.expanded;
   }
 
-  private _loadFeed() {
-    this.feed = this._feedService.getData();
+  private loadFeed() {
+    this.feed = this.feedService.getData();
   }
 }

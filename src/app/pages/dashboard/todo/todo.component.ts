@@ -11,17 +11,17 @@ import {TodoService} from './todo.service';
   template: require('./todo.html')
 })
 export class Todo {
-  
-  public dashboardColors = this._baConfig.get().colors.dashboard;
+
+  public dashboardColors = this.baConfig.get().colors.dashboard;
 
   public todoList:Array<any>;
   public newTodoText:string = '';
 
-  constructor(private _baConfig:BaThemeConfigProvider, private _todoService:TodoService) {
-    this.todoList = this._todoService.getTodoList();
+  constructor(private baConfig:BaThemeConfigProvider, private todoService:TodoService) {
+    this.todoList = this.todoService.getTodoList();
 
     this.todoList.forEach((item) => {
-      item.color = this._getRandomColor();
+      item.color = this.getRandomColor();
     });
   }
 
@@ -37,13 +37,13 @@ export class Todo {
 
       this.todoList.unshift({
         text: this.newTodoText,
-        color: this._getRandomColor(),
+        color: this.getRandomColor(),
       });
       this.newTodoText = '';
     }
   }
 
-  private _getRandomColor() {
+  private getRandomColor() {
     let colors = Object.keys(this.dashboardColors).map(key => this.dashboardColors[key]);
 
     var i = Math.floor(Math.random() * (colors.length - 1));
