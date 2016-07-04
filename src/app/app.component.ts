@@ -51,10 +51,10 @@ export class App {
 
   isMenuCollapsed:boolean = false;
 
-  constructor(private _state:AppState, private _imageLoader:BaImageLoaderService, private _spinner:BaThemeSpinner, private _config:BaThemeConfig) {
-    this._loadImages();
+  constructor(private state:AppState, private imageLoader:BaImageLoaderService, private spinner:BaThemeSpinner, private config:BaThemeConfig) {
+    this.loadImages();
 
-    this._state.subscribe('menu.isCollapsed', (isCollapsed) => {
+    this.state.subscribe('menu.isCollapsed', (isCollapsed) => {
       this.isMenuCollapsed = isCollapsed;
     });
   }
@@ -62,12 +62,12 @@ export class App {
   public ngAfterViewInit():void {
     // hide spinner once all loaders are completed
     BaThemePreloader.load().then((values) => {
-      this._spinner.hide();
+      this.spinner.hide();
     });
   }
 
-  private _loadImages():void {
+  private loadImages():void {
     // register some loaders
-    BaThemePreloader.registerLoader(this._imageLoader.load(layoutPaths.images.root + 'sky-bg.jpg'));
+    BaThemePreloader.registerLoader(this.imageLoader.load(layoutPaths.images.root + 'sky-bg.jpg'));
   }
 }

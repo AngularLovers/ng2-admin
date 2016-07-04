@@ -12,7 +12,7 @@ export const menuItems = [
     icon: 'ion-compose',
     selected: false,
     expanded: false,
-    order: 200,
+    order: 100,
     subMenu: [
       {
         title: '官网首页',
@@ -176,61 +176,7 @@ export const menuItems = [
     ]
   },
   {
-    title: '一级菜单',
-    icon: 'ion-ios-more',
-    selected: false,
-    expanded: false,
-    order: 700,
-    subMenu: [
-      {
-        title: '二级菜单1',
-        url: '#', subMenu: [{
-        title: '三级菜单1',
-        url: '#',
-        disabled: true,
-        selected: false,
-        expanded: false
-      },{
-        title: '三级菜单2',
-        url: '#',
-        disabled: true,
-        selected: false,
-        expanded: false
-      },{
-        title: '三级菜单3',
-        url: '#',
-        disabled: true,
-        selected: false,
-        expanded: false
-      }]
-      },
-      {
-        title: '二级菜单2',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        },{
-          title: '三级菜单2',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        },{
-          title: '三级菜单3',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      }
-    ]
-  },
-  {
-    title: '额外链接',
+    title: '其他链接',
     url: 'http://witdor.com',
     icon: 'ion-android-exit',
     selected: false,

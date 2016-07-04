@@ -1,17 +1,17 @@
-import {Injectable} from '@angular/core';
-import {menuItems} from '../../../app.menu';
+import { Injectable } from '@angular/core';
+import { menuItems } from '../../../app.menu';
 
 @Injectable()
 export class BaSidebarService {
 
-  private _router;
+  private router;
 
   public getMenuItems():Array<Object> {
     return menuItems;
   }
 
   public setRouter(router): BaSidebarService {
-    this._router = router;
+    this.router = router;
     return this;
   }
 
@@ -22,12 +22,12 @@ export class BaSidebarService {
 
     items.forEach((menu: any) => {
 
-      this._selectItem([menu.component], menu);
+      this.selectItem([menu.component], menu);
       assignCurrent(menu);
 
       if (menu.subMenu) {
         menu.subMenu.forEach((subMenu) => {
-          this._selectItem([menu.component, subMenu.component], subMenu, menu);
+          this.selectItem([menu.component, subMenu.component], subMenu, menu);
           assignCurrent(subMenu);
         });
       }
@@ -35,19 +35,19 @@ export class BaSidebarService {
     return currentMenu;
   }
 
-  private _selectItem(instructions, item, parentMenu = null) {
-    let route = this._generateRoute(instructions);
-    item.selected = !item.disabled && this._isCurrent(route);
+  private selectItem(instructions, item, parentMenu = null) {
+    let route = this.generateRoute(instructions);
+    item.selected = !item.disabled && this.isCurrent(route);
     if (parentMenu) {
       parentMenu.expanded = parentMenu.expanded || item.selected;
     }
   }
 
-  private _isCurrent(route) {
-    return route ? this._router.isRouteActive(route) : false;
+  private isCurrent(route) {
+    return route ? this.router.isRouteActive(route) : false;
   }
 
-  private _generateRoute(instructions) {
-    return instructions.filter(i => typeof i !== 'undefined').length > 0 ? this._router.generate(instructions) : null;
+  private generateRoute(instructions) {
+    return instructions.filter(i => typeof i !== 'undefined').length > 0 ? this.router.generate(instructions) : null;
   }
 }
