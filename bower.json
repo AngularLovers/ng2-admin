@@ -1,8 +1,8 @@
 {
-  "name": "Taurus",
+  "name": "taurus",
   "version": "0.0.1",
   "description": "维度空间官网.",
-  "author": "akveo",
+  "author": "xiaomo",
   "homepage": "http://git.oschina.net/WDSpace/Taurus",
   "license": "MIT",
   "moduleType": [
