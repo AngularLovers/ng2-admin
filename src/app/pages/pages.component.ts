@@ -4,10 +4,7 @@ import { RouteConfig } from '@angular/router-deprecated';
 import { BaPageTop, BaContentTop, BaSidebar, BaBackTop } from '../theme/components';
 
 import { Dashboard } from './dashboard';
-import { Ui } from './demo/ui';
-import { Forms } from './demo/forms';
-import { Tables } from './demo/tables';
-import { Editors } from "./demo/editors";
+import { Demos } from './demo/demo.component';
 
 @Component({
   selector: 'pages',
@@ -24,24 +21,9 @@ import { Editors } from "./demo/editors";
     useAsDefault: true,
   },
   {
-    name: 'Editors',
-    component: Editors,
-    path: '/editors/...',
-  },
-  {
-    name: 'Ui',
-    component: Ui,
-    path: '/ui/...',
-  },
-  {
-    name: 'Forms',
-    component: Forms,
-    path: '/forms/...',
-  },
-  {
-    name: 'Tables',
-    component: Tables,
-    path: '/tables/...',
+    name: '内置组件',
+    component: Demos,
+    path: '/demos/...',
   }
 ])
 export class Pages {

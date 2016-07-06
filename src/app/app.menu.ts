@@ -93,25 +93,15 @@ export const menuItems = [
     ]
   },
   {
-    title: '编辑器',
-    component: 'Editors',
+    title: 'Demo',
+    component: 'Demos',
     icon: 'ion-edit',
     order: 200,
     subMenu: [
       {
         title: '编辑器',
         component: 'Ckeditor'
-      }
-    ]
-  },
-  {
-    title: 'UI特征',
-    component: 'Ui',
-    icon: 'ion-android-laptop',
-    selected: false,
-    expanded: false,
-    order: 300,
-    subMenu: [
+      },
       {
         title: '文字排版',
         component: 'Typography',
@@ -128,16 +118,6 @@ export const menuItems = [
         title: '栅格布局',
         component: 'Grid',
       },
-    ]
-  },
-  {
-    title: '表单元素',
-    component: 'Forms',
-    icon: 'ion-compose',
-    selected: false,
-    expanded: false,
-    order: 400,
-    subMenu: [
       {
         title: '表单输入',
         component: 'Inputs',
@@ -146,31 +126,13 @@ export const menuItems = [
         title: '表单布局',
         component: 'Layouts',
       },
-    ]
-  },
-  {
-    title: '表格',
-    component: 'Tables',
-    icon: 'ion-grid',
-    selected: false,
-    expanded: false,
-    order: 500,
-    subMenu: [
       {
         title: '基本表格',
         component: 'BasicTables',
-      }
-    ]
-  },
-  {
-    title: '页面',
-    icon: 'ion-document',
-    selected: false,
-    expanded: false,
-    order: 650,
-    subMenu: [
+      },
       {
         title: '登陆',
+        component: 'Login',
         url: '#/login',
       },
     ]

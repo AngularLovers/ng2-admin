@@ -1,1 +1,1 @@
-export * from './tables.component';
+export * from './components/basicTables/index';
