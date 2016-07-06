@@ -1,21 +1,21 @@
 export const menuItems = [
   {
-    title: '主面板',
+    title: '因你而在',
     component: 'Dashboard',
     icon: 'ion-android-home',
     selected: false,
     expanded: false,
-    order: 0
+    order: 100
   },
   {
-    title: '维度空间官网',
+    title: '维度后台管理',
     icon: 'ion-compose',
     selected: false,
     expanded: false,
-    order: 100,
+    order: 200,
     subMenu: [
       {
-        title: '官网首页',
+        title: '权限管理',
         url: '#', subMenu: [{
         title: '三级菜单1',
         url: '#',
@@ -25,7 +25,7 @@ export const menuItems = [
       }]
       },
       {
-        title: '团队介绍',
+        title: '菜单管理',
         url: '#',
         subMenu: [{
           title: '三级菜单1',
@@ -36,7 +36,7 @@ export const menuItems = [
         }]
       },
       {
-        title: '技术动态',
+        title: '系统设置',
         url: '#',
         subMenu: [{
           title: '三级菜单1',
@@ -46,72 +46,103 @@ export const menuItems = [
           expanded: false
         }]
       },
-      {
-        title: '报价咨询',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      },
-      {
-        title: '项目流程',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      },
-      {
-        title: '招贤纳士',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      },
-      {
-        title: '关于我们',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      }
     ]
   },
   {
-    title: '编辑器',
-    component: 'Editors',
-    icon: 'ion-edit',
-    order: 200,
-    subMenu: [
-      {
-        title: '编辑器',
-        component: 'Ckeditor'
-      }
-    ]
-  },
-  {
-    title: 'UI特征',
-    component: 'Ui',
-    icon: 'ion-android-laptop',
+    title: '维度空间管理',
+    icon: 'ion-compose',
     selected: false,
     expanded: false,
     order: 300,
     subMenu: [
+      {
+        title: '首页管理',
+        url: '#', subMenu: [{
+        title: '三级菜单1',
+        url: '#',
+        disabled: true,
+        selected: false,
+        expanded: false
+      }]
+      },
+      {
+        title: '吉祥物管理',
+        url: '#',
+        subMenu: [{
+          title: '三级菜单1',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
+      },
+      {
+        title: '联系我们管理',
+        url: '#',
+        subMenu: [{
+          title: '三级菜单1',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
+      },
+      {
+        title: '报价管理',
+        url: '#',
+        subMenu: [{
+          title: '三级菜单1',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
+      },
+      {
+        title: '关于我们管理',
+        url: '#',
+        subMenu: [{
+          title: '三级菜单1',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
+      },
+      {
+        title: '流程管理',
+        url: '#',
+        subMenu: [{
+          title: '三级菜单1',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
+      },
+      {
+        title: '招聘管理',
+        url: '#',
+        subMenu: [{
+          title: '三级菜单1',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
+      }
+    ]
+  },
+  {
+    title: '内置组件预览',
+    component: 'Demos',
+    icon: 'ion-edit',
+    order: 400,
+    subMenu: [
+      {
+        title: '编辑器',
+        component: 'Ckeditor'
+      },
       {
         title: '文字排版',
         component: 'Typography',
@@ -128,16 +159,6 @@ export const menuItems = [
         title: '栅格布局',
         component: 'Grid',
       },
-    ]
-  },
-  {
-    title: '表单元素',
-    component: 'Forms',
-    icon: 'ion-compose',
-    selected: false,
-    expanded: false,
-    order: 400,
-    subMenu: [
       {
         title: '表单输入',
         component: 'Inputs',
@@ -146,42 +167,66 @@ export const menuItems = [
         title: '表单布局',
         component: 'Layouts',
       },
-    ]
-  },
-  {
-    title: '表格',
-    component: 'Tables',
-    icon: 'ion-grid',
-    selected: false,
-    expanded: false,
-    order: 500,
-    subMenu: [
       {
         title: '基本表格',
         component: 'BasicTables',
-      }
-    ]
-  },
-  {
-    title: '页面',
-    icon: 'ion-document',
-    selected: false,
-    expanded: false,
-    order: 650,
-    subMenu: [
+      },
       {
         title: '登陆',
+        component: 'Login',
         url: '#/login',
       },
     ]
   },
   {
-    title: '其他链接',
+    title: '魔兽世界管理',
     url: 'http://witdor.com',
     icon: 'ion-android-exit',
-    selected: false,
-    expanded: false,
+    order: 500,
+    subMenu: [{
+      title: '三级菜单1',
+      url: '#',
+      disabled: true,
+      selected: false,
+      expanded: false
+    }]
+  },
+  {
+    title: '守卫先锋管理',
+    url: 'http://witdor.com',
+    icon: 'ion-android-exit',
+    order: 600,
+    subMenu: [{
+      title: '三级菜单1',
+      url: '#',
+      disabled: true,
+      selected: false,
+      expanded: false
+    }]
+  },
+  {
+    title: '技术文档管理',
+    url: 'http://witdor.com',
+    icon: 'ion-android-exit',
+    order: 700,
+    subMenu: [{
+      title: '三级菜单1',
+      url: '#',
+      disabled: true,
+      selected: false,
+      expanded: false
+    }]
+  }, {
+    title: '联系人管理',
+    url: 'http://witdor.com',
+    icon: 'ion-android-exit',
     order: 800,
-    target: '_blank'
+    subMenu: [{
+      title: '三级菜单1',
+      url: '#',
+      disabled: true,
+      selected: false,
+      expanded: false
+    }]
   }
 ];

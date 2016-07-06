@@ -4,7 +4,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 import {RouteConfig} from '@angular/router-deprecated';
 
 import {Pages} from './pages';
-import {Login} from './pages/login';
+import {Login} from './pages/manager/login';
 import {AppState} from './app.state';
 import {BaThemeConfigProvider, BaThemeConfig} from './theme';
 import {BaThemeRun} from './theme/directives';

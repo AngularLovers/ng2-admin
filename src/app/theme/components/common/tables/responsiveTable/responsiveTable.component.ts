@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { BaAppPicturePipe } from './../../../../pipes/index';
-import { BasicTablesService } from './../../../../../../app/pages/tables/components/basicTables/basicTables.service';
+import { BasicTablesService } from '../../../../../pages/demo/tables/components/basicTables/basicTables.service';
 
 @Component({
   selector: 'responsive-table',
