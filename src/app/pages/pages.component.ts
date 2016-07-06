@@ -21,7 +21,7 @@ import { Demos } from './demo/demo.component';
     useAsDefault: true,
   },
   {
-    name: '内置组件',
+    name: 'Demos',
     component: Demos,
     path: '/demos/...',
   }
