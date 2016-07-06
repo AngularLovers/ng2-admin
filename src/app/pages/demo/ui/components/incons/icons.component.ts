@@ -1,7 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
-import {BaCard} from '../../../../theme/components';
-import {BaKameleonPicturePipe} from '../../../../theme/pipes';
+import {BaCard} from './../../../../../theme/components';
+import {BaKameleonPicturePipe} from './../../../../../theme/pipes';
 import {IconsService} from './icons.service';
 
 @Component({

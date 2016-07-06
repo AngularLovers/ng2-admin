@@ -1,13 +1,13 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-import {RouteConfig} from '@angular/router-deprecated';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { RouteConfig } from '@angular/router-deprecated';
 
-import {BaPageTop, BaContentTop, BaSidebar, BaBackTop} from '../theme/components';
+import { BaPageTop, BaContentTop, BaSidebar, BaBackTop } from '../theme/components';
 
-import {Dashboard} from './dashboard';
-import {Ui} from './ui';
-import {Forms} from './forms';
-import {Tables} from './tables';
-import {Editors} from "./editors";
+import { Dashboard } from './dashboard';
+import { Ui } from './demo/ui';
+import { Forms } from './demo/forms';
+import { Tables } from './demo/tables';
+import { Editors } from "./demo/editors";
 
 @Component({
   selector: 'pages',
@@ -18,15 +18,15 @@ import {Editors} from "./editors";
 })
 @RouteConfig([
   {
-    name: 'Editors',
-    component: Editors,
-    path: '/editors/...',
-  },
-  {
     name: 'Dashboard',
     component: Dashboard,
     path: '/dashboard',
     useAsDefault: true,
+  },
+  {
+    name: 'Editors',
+    component: Editors,
+    path: '/editors/...',
   },
   {
     name: 'Ui',

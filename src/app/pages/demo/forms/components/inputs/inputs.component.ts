@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-import { BaCard, StandardInputs,ValidationInputs,GroupInputs,CheckboxInputs } from './../../../../theme/components/index';
+import { BaCard, StandardInputs,ValidationInputs,GroupInputs,CheckboxInputs } from './../../../../../theme/components/index';
 
 @Component({
   selector: 'inputs',

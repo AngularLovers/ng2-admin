@@ -1,6 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
-import {BaCard} from '../../../../theme/components';
+import {BaCard} from './../../../../../theme/components';
 
 @Component({
   selector: 'grid',

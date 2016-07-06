@@ -10,7 +10,7 @@ import {
   LargeButtons,
   DropdownButtons,
   GroupButtons
-} from '../../../../theme/components/index';
+} from './../../../../../theme/components/index';
 
 @Component({
   selector: 'buttons',
