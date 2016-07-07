@@ -1,25 +1,20 @@
 import {Component, OnInit} from '@angular/core';
 
-import { BaCard } from './../../../theme/components/index';
-import { BaAppPicturePipe } from './../../../theme/pipes/index';
-import { AdminService } from './admin.service';
+import { BaCard } from '../../../theme/components/index';
+import { AdminTableComponent } from './adminTable/adminTable.component';
 
 @Component({
   moduleId: module.id,
   selector: 'admins',
-  directives: [BaCard],
-  providers: [AdminService],
-  pipes: [BaAppPicturePipe],
-  template: require('./admin.html')
+  directives:[AdminTableComponent,BaCard],
+  template: require('./admins.html')
 })
 export class AdminsComponent implements OnInit {
-
-  peopleTableData:Array<any>;
-
-  constructor(private adminService:AdminService) {
-    this.peopleTableData = adminService.peopleTableData;
+  constructor() {
   }
 
   ngOnInit() {
   }
+
+
 }
