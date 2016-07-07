@@ -1,6 +1,6 @@
 export const menuItems = [
   {
-    title: '因你而在',
+    title: '维度因你而在',
     component: 'Dashboard',
     icon: 'ion-android-home',
     selected: false,
@@ -9,42 +9,21 @@ export const menuItems = [
   },
   {
     title: '维度后台管理',
+    component: 'Managers',
     icon: 'ion-compose',
-    selected: false,
-    expanded: false,
     order: 200,
     subMenu: [
       {
         title: '权限管理',
-        url: '#', subMenu: [{
-        title: '三级菜单1',
-        url: '#',
-        disabled: true,
-        selected: false,
-        expanded: false
-      }]
+        component: 'Admins',
       },
       {
         title: '菜单管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
+        component: 'Menus',
       },
       {
         title: '系统设置',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
+        url: '#'
       },
     ]
   },
@@ -177,56 +156,10 @@ export const menuItems = [
         url: '#/login',
       },
     ]
-  },
-  {
-    title: '魔兽世界管理',
-    url: 'http://witdor.com',
+  },{
+    title: '所有联系人管理',
     icon: 'ion-android-exit',
-    order: 500,
-    subMenu: [{
-      title: '三级菜单1',
-      url: '#',
-      disabled: true,
-      selected: false,
-      expanded: false
-    }]
-  },
-  {
-    title: '守卫先锋管理',
-    url: 'http://witdor.com',
-    icon: 'ion-android-exit',
-    order: 600,
-    subMenu: [{
-      title: '三级菜单1',
-      url: '#',
-      disabled: true,
-      selected: false,
-      expanded: false
-    }]
-  },
-  {
-    title: '技术文档管理',
-    url: 'http://witdor.com',
-    icon: 'ion-android-exit',
-    order: 700,
-    subMenu: [{
-      title: '三级菜单1',
-      url: '#',
-      disabled: true,
-      selected: false,
-      expanded: false
-    }]
-  }, {
-    title: '联系人管理',
-    url: 'http://witdor.com',
-    icon: 'ion-android-exit',
+    component: 'AllConcat',
     order: 800,
-    subMenu: [{
-      title: '三级菜单1',
-      url: '#',
-      disabled: true,
-      selected: false,
-      expanded: false
-    }]
-  }
+  },
 ];

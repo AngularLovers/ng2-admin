@@ -18,15 +18,15 @@ export class BaPageTop {
   public isScrolled:boolean = false;
   public isMenuCollapsed:boolean = false;
 
-  constructor(private _state:AppState) {
-    this._state.subscribe('menu.isCollapsed', (isCollapsed) => {
+  constructor(private state:AppState) {
+    this.state.subscribe('menu.isCollapsed', (isCollapsed) => {
       this.isMenuCollapsed = isCollapsed;
     });
   }
 
   public toggleMenu() {
     this.isMenuCollapsed = !this.isMenuCollapsed;
-    this._state.notifyDataChanged('menu.isCollapsed', this.isMenuCollapsed);
+    this.state.notifyDataChanged('menu.isCollapsed', this.isMenuCollapsed);
   }
 
   public scrolledChanged(isScrolled) {

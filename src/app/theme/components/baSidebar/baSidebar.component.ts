@@ -16,18 +16,18 @@ import {BaSidebarService} from './baSidebar.service';
 })
 export class BaSidebar {
 
-  public menuItems:Array<any>;
-  public menuHeight:number;
-  public isMenuCollapsed:boolean = false;
+  public menuItems:Array<any>; //菜单项目
+  public menuHeight:number; //菜单产
+  public isMenuCollapsed:boolean = false; //菜单是否折叠
 
-  public showHoverElem:boolean;
-  public hoverElemHeight:number;
-  public hoverElemTop:number;
+  public showHoverElem:boolean; //是否显示hover
+  public hoverElemHeight:number; // hover的高度
+  public hoverElemTop:number; // hover距顶大小
 
-  public outOfArea:number = -200;
+  public outOfArea:number = -200; //外围区域
 
-  public isMenuShouldCollapsed:boolean = false;
-  protected onRouteChange;
+  public isMenuShouldCollapsed:boolean = false; //菜单是否应该折叠
+  protected onRouteChange; //路由变化
 
   constructor(private elementRef:ElementRef,
               private router:Router,
@@ -42,12 +42,18 @@ export class BaSidebar {
   }
 
 
+  /**
+   * 初始化: 如果菜单应该被折叠，那就把菜单折叠
+   */
   public ngOnInit():void {
     if (this.shouldMenuCollapse()) {
       this.menuCollapse();
     }
   }
 
+  /**
+   * 销毁
+   */
   public ngOnDestroy():void {
     this.onRouteChange.unsubscribe();
   }
