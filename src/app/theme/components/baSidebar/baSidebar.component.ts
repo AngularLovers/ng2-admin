@@ -17,7 +17,7 @@ import {BaSidebarService} from './baSidebar.service';
 export class BaSidebar {
 
   public menuItems:Array<any>; //菜单项目
-  public menuHeight:number; //菜单产
+  public menuHeight:number; //菜单高度
   public isMenuCollapsed:boolean = false; //菜单是否折叠
 
   public showHoverElem:boolean; //是否显示hover
