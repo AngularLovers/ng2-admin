@@ -5,6 +5,7 @@ import { BaPageTop, BaContentTop, BaSidebar, BaBackTop } from '../theme/componen
 
 import { Dashboard } from './dashboard';
 import { Demos } from './demo/demo.component';
+import { Managers } from './manager/manager.component';
 
 @Component({
   selector: 'pages',
@@ -19,6 +20,11 @@ import { Demos } from './demo/demo.component';
     component: Dashboard,
     path: '/dashboard',
     useAsDefault: true,
+  },
+  {
+    name: 'Managers',
+    component: Managers,
+    path: '/managers/...',
   },
   {
     name: 'Demos',

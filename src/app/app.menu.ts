@@ -9,20 +9,13 @@ export const menuItems = [
   },
   {
     title: '维度后台管理',
+    component: 'Managers',
     icon: 'ion-compose',
-    selected: false,
-    expanded: false,
     order: 200,
     subMenu: [
       {
         title: '权限管理',
-        url: '#', subMenu: [{
-        title: '三级菜单1',
-        url: '#',
-        disabled: true,
-        selected: false,
-        expanded: false
-      }]
+        component: 'Admins',
       },
       {
         title: '菜单管理',

@@ -9,23 +9,23 @@ export class BaSlimScroll {
 
   @Input() public baSlimScrollOptions:Object;
 
-  constructor(private _elementRef:ElementRef) {
+  constructor(private elementRef:ElementRef) {
   }
 
   ngOnChanges(changes) {
-    this._scroll();
+    this.scroll();
   }
 
-  private _scroll() {
-    this._destroy();
-    this._init();
+  private scroll() {
+    this.destroy();
+    this.init();
   }
 
-  private _init() {
-    jQuery(this._elementRef.nativeElement).slimScroll(this.baSlimScrollOptions);
+  private init() {
+    jQuery(this.elementRef.nativeElement).slimScroll(this.baSlimScrollOptions);
   }
 
-  private _destroy() {
-    jQuery(this._elementRef.nativeElement).slimScroll({ destroy: true });
+  private destroy() {
+    jQuery(this.elementRef.nativeElement).slimScroll({ destroy: true });
   }
 }
