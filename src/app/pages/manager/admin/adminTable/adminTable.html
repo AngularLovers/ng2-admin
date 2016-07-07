@@ -4,14 +4,8 @@
       <th>#</th>
       <th>名字</th>
       <th>职位</th>
-      <th>用户名</th>
-      <th>邮箱</th>
-      <th>邮箱</th>
-      <th>邮箱</th>
-      <th>邮箱</th>
-      <th>邮箱</th>
-      <th>邮箱</th>
       <th>状态</th>
+      <th>权限</th>
       <th>操作</th>
     </tr>
     <tr *ngFor="let item of peopleTableData">
@@ -19,18 +13,11 @@
       <td>{{ item.firstName }}</td>
       <td>{{ item.lastName }}</td>
       <td>{{ item.username }}</td>
-      <td><a class="email-link" href="mailto:{{ item.email }}">{{ item.email }}</a></td>
-      <td><a class="email-link" href="mailto:{{ item.email }}">{{ item.email }}</a></td>
-      <td><a class="email-link" href="mailto:{{ item.email }}">{{ item.email }}</a></td>
-      <td><a class="email-link" href="mailto:{{ item.email }}">{{ item.email }}</a></td>
-      <td><a class="email-link" href="mailto:{{ item.email }}">{{ item.email }}</a></td>
-      <td><a class="email-link" href="mailto:{{ item.email }}">{{ item.email }}</a></td>
       <td>
         <button ngClass="{status-button btn btn-xs btn-{{ item.status }}">{{ item.status }}</button>
       </td>
       <td>
-        <a class="btn btn-primary">修改</a>
-        <a class="btn btn-danger">删除</a>
+        <a class="btn btn-success">操作</a>
       </td>
     </tr>
   </table>
