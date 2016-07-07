@@ -6,6 +6,7 @@ import { BaPageTop, BaContentTop, BaSidebar, BaBackTop } from '../theme/componen
 import { Dashboard } from './dashboard';
 import { Demos } from './demo/demo.component';
 import { Managers } from './manager/manager.component';
+import { AllConcat } from './allConcat/allConcat.component';
 
 @Component({
   selector: 'pages',
@@ -30,6 +31,11 @@ import { Managers } from './manager/manager.component';
     name: 'Demos',
     component: Demos,
     path: '/demos/...',
+  },
+  {
+    name: 'AllConcat',
+    component: AllConcat,
+    path: '/allConcat',
   }
 ])
 export class Pages {
