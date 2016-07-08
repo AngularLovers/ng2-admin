@@ -8,108 +8,74 @@ export class AdminService {
   smartTableData = [
     {
       id: 1,
-      firstName: '小莫',
-      lastName: '前端',
-      username: '@mdo',
-      email: 'mdo@gmail.com',
-      age: '28'
+      name: '小莫',
+      job: '前端',
+      status: 'primary',
+      power: '1'
     },
     {
       id: 2,
-      firstName: 'Alice',
-      lastName: '产品',
-      username: '@fat',
-      email: 'fat@yandex.ru',
-      age: '45'
+      name: 'Alice',
+      job: '产品',
+      status: 'danger',
+      power: '1'
     },
     {
       id: 3,
-      firstName: '胡旭',
-      lastName: '后端',
-      username: '@twitter',
-      email: 'twitter@outlook.com',
-      age: '18'
+      name: '胡旭',
+      job: '后端',
+      status: 'success',
+      power: '1'
     },
     {
       id: 4,
-      firstName: '龙猫',
-      lastName: 'UI设计师',
-      username: '@snow',
-      email: 'snow@gmail.com',
-      age: '20'
+      name: '龙猫',
+      job: 'UI',
+      status: 'danger',
+      power: '1'
     },
     {
       id: 5,
-      firstName: '阿仁',
-      lastName: '前端',
-      username: '@jack',
-      email: 'jack@yandex.ru',
-      age: '30'
+      name: '吉吉',
+      job: '前端',
+      status: 'primary',
+      power: '1'
     },
     {
       id: 6,
-      firstName: '吉吉',
-      lastName: '前端',
-      username: '@ann',
-      email: 'ann@gmail.com',
-      age: '21'
+      name: '维度',
+      job: '官网',
+      status: 'success',
+      power: '1'
     },
     {
       id: 7,
-      firstName: '牛茜',
-      lastName: 'UI设计师',
-      username: '@barbara',
-      email: 'barbara@yandex.ru',
-      age: '43'
+      name: 'OneKey',
+      job: 'IOS',
+      status: 'default',
+      power: '3'
     },
     {
       id: 8,
-      firstName: '王玉',
-      lastName: 'IOS',
-      username: '@sevan',
-      email: 'sevan@outlook.com',
-      age: '13'
+      name: '小莫',
+      job: '前端',
+      status: 'info',
+      power: '2'
     },
     {
       id: 9,
-      firstName: '蜗牛',
-      lastName: 'UI设计师',
-      username: '@ruben',
-      email: 'ruben@gmail.com',
-      age: '22'
+      name: '牛茜',
+      job: 'UI',
+      status: 'primary',
+      power: '2'
     },
     {
       id: 10,
-      firstName: 'OneKey',
-      lastName: 'Sevan',
-      username: '@karen',
-      email: 'karen@yandex.ru',
-      age: '33'
-    },
-    {
-      id: 11,
-      firstName: '董勋',
-      lastName: 'IOS',
-      username: '@mark',
-      email: 'mark@gmail.com',
-      age: '38'
-    },
-    {
-      id: 12,
-      firstName: 'Y',
-      lastName: 'JAVA',
-      username: '@jacob',
-      email: 'jacob@yandex.ru',
-      age: '48'
-    },
-    {
-      id: 13,
-      firstName: '兔腿',
-      lastName: 'IOS',
-      username: '@haik',
-      email: 'haik@outlook.com',
-      age: '48'
-    },
+      name: 'OneKey',
+      job: 'IOS',
+      status: 'danger',
+      power: '3',
+    }
   ];
 
   editableTableData:Array<any>;
