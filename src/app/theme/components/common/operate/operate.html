@@ -1,10 +1,13 @@
 <span (mouseenter)="showOperate()" (mouseleave)="hideOperate()" class="link-group">
-  <div *ngIf="!flag">
+
+  <div class="operationBtn">
+
     操作
   </div>
-  <div *ngIf="flag">
+
+  <div *ngIf="flag" class="groupBox">
     <ul class="list-group" *ngFor="let item of links">
-       <common-link [link]="item"></common-link>
+      <common-link [link]="item"></common-link>
     </ul>
   </div>
 </span>
