@@ -1,3 +1,3 @@
-/**
- * Created by Administrator on 2016/7/6.
- */
+export * from './witdor.component';
+export * from './witdorMenus/index'
+export * from './witdorIndex/index'

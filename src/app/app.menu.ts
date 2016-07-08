@@ -16,41 +16,19 @@ export const menuItems = [
     order: 150
   },
   {
-    title: '维度后台管理',
-    component: 'Managers',
+    title: '维度空间管理',
+    component:"Witdors",
     icon: 'ion-compose',
     order: 200,
     subMenu: [
       {
-        title: '权限管理',
-        component: 'Admins',
+        title: '首页管理',
+        component: 'Indexes',
+        icon: 'ion-compose',
       },
       {
         title: '菜单管理',
-        component: 'Menus',
-      },
-      {
-        title: '系统设置',
-        url: '#'
-      },
-    ]
-  },
-  {
-    title: '维度空间管理',
-    icon: 'ion-compose',
-    selected: false,
-    expanded: false,
-    order: 300,
-    subMenu: [
-      {
-        title: '首页管理',
-        url: '#', subMenu: [{
-        title: '三级菜单1',
-        url: '#',
-        disabled: true,
-        selected: false,
-        expanded: false
-      }]
+        component: 'WitdorMenus',
       },
       {
         title: '吉祥物管理',
@@ -110,6 +88,26 @@ export const menuItems = [
     ]
   },
   {
+    title: '维度后台管理',
+    component: 'Managers',
+    icon: 'ion-compose',
+    order: 300,
+    subMenu: [
+      {
+        title: '权限管理',
+        component: 'Admins',
+      },
+      {
+        title: '菜单管理',
+        component: 'Menus',
+      },
+      {
+        title: '系统设置',
+        url: '#'
+      },
+    ]
+  },
+  {
     title: '内置组件预览',
     component: 'Demos',
     icon: 'ion-edit',
@@ -153,7 +151,7 @@ export const menuItems = [
         url: '#/login',
       },
     ]
-  },{
+  }, {
     title: '所有联系人管理',
     icon: 'ion-android-exit',
     component: 'AllConcat',

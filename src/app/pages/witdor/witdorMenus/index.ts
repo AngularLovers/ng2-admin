@@ -1,3 +1,1 @@
-/**
- * Created by Administrator on 2016/7/8.
- */
+export * from './menus.component';

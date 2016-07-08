@@ -7,6 +7,7 @@ import { Dashboard } from './dashboard';
 import { Demos } from './demo/demo.component';
 import { Managers } from './manager/manager.component';
 import { AllConcat } from './allConcat/allConcat.component';
+import { Witdors } from './witdor/index';
 import { Test } from './test/test.component';
 
 @Component({
@@ -22,6 +23,11 @@ import { Test } from './test/test.component';
     component: Dashboard,
     path: '/dashboard',
     useAsDefault: true,
+  },
+  {
+    name: 'Witdors',
+    component: Witdors,
+    path: '/witdors/...',
   },
   {
     name: 'Managers',
