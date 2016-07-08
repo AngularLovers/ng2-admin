@@ -21,11 +21,6 @@ import 'bootstrap-loader';
 import 'font-awesome-sass-loader';
 import 'lodash';
 
-// UI
-import 'jquery-ui';
-import 'primeui/primeui-ng-all.min.js';
-
-
 if ('production' === ENV) {
   // Production
 
