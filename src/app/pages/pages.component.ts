@@ -7,6 +7,7 @@ import { Dashboard } from './dashboard';
 import { Demos } from './demo/demo.component';
 import { Managers } from './manager/manager.component';
 import { AllConcat } from './allConcat/allConcat.component';
+import { Test } from './test/test.component';
 
 @Component({
   selector: 'pages',
@@ -36,6 +37,11 @@ import { AllConcat } from './allConcat/allConcat.component';
     name: 'AllConcat',
     component: AllConcat,
     path: '/allConcat',
+  },
+  {
+    name: 'Test',
+    component: Test,
+    path: '/test',
   }
 ])
 export class Pages {

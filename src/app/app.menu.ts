@@ -8,6 +8,14 @@ export const menuItems = [
     order: 100
   },
   {
+    title: '测试组件效果',
+    component: 'Test',
+    icon: 'ion-android-home',
+    selected: false,
+    expanded: false,
+    order: 150
+  },
+  {
     title: '维度后台管理',
     component: 'Managers',
     icon: 'ion-compose',
@@ -46,17 +54,6 @@ export const menuItems = [
       },
       {
         title: '吉祥物管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      },
-      {
-        title: '联系我们管理',
         url: '#',
         subMenu: [{
           title: '三级菜单1',
