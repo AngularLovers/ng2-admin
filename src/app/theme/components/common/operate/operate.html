@@ -1,9 +1,8 @@
 <span (mouseenter)="showOperate()" (mouseleave)="hideOperate()" class="link-group">
 
-  <div class="operationBtn">
-
+  <button class="btn btn-default operationBtn">
     操作
-  </div>
+  </button>
 
   <div *ngIf="flag" class="groupBox">
     <ul class="list-group" *ngFor="let item of links">

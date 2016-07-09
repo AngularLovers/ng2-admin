@@ -8,10 +8,55 @@ export const menuItems = [
     order: 100
   },
   {
+    title: '测试组件效果',
+    component: 'Test',
+    icon: 'ion-android-home',
+    selected: false,
+    expanded: false,
+    order: 150
+  },
+  {
+    title: '维度空间管理',
+    component:"Witdors",
+    icon: 'ion-compose',
+    order: 200,
+    subMenu: [
+      {
+        title: '首页管理',
+        component: 'Indexes',
+        icon: 'ion-compose',
+      },
+      {
+        title: '菜单管理',
+        component: 'WitdorMenus',
+      },
+      {
+        title: '吉祥物管理',
+        url: '#'
+      },
+      {
+        title: '报价管理',
+        url: '#'
+      },
+      {
+        title: '关于我们管理',
+        url: '#'
+      },
+      {
+        title: '流程管理',
+        url: '#'
+      },
+      {
+        title: '招聘管理',
+        url: '#'
+      }
+    ]
+  },
+  {
     title: '维度后台管理',
     component: 'Managers',
     icon: 'ion-compose',
-    order: 200,
+    order: 300,
     subMenu: [
       {
         title: '权限管理',
@@ -25,91 +70,6 @@ export const menuItems = [
         title: '系统设置',
         url: '#'
       },
-    ]
-  },
-  {
-    title: '维度空间管理',
-    icon: 'ion-compose',
-    selected: false,
-    expanded: false,
-    order: 300,
-    subMenu: [
-      {
-        title: '首页管理',
-        url: '#', subMenu: [{
-        title: '三级菜单1',
-        url: '#',
-        disabled: true,
-        selected: false,
-        expanded: false
-      }]
-      },
-      {
-        title: '吉祥物管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      },
-      {
-        title: '联系我们管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      },
-      {
-        title: '报价管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      },
-      {
-        title: '关于我们管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      },
-      {
-        title: '流程管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      },
-      {
-        title: '招聘管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      }
     ]
   },
   {
@@ -154,6 +114,34 @@ export const menuItems = [
         title: '登陆',
         component: 'Login',
         url: '#/login',
+      },
+    ]
+  }, {
+    title: '菜单嵌套示例',
+    icon: 'ion-compose',
+    order: 200,
+    subMenu: [
+      {
+        title: '二级菜单',
+        icon: 'ion-compose',
+        subMenu: [{
+          title: '三级菜单',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
+      },
+      {
+        title: '二级菜单',
+        url: '#',
+        subMenu: [{
+          title: '三级菜单',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
       },
     ]
   },{

@@ -28,10 +28,12 @@ export class OperateComponent implements OnInit {
         {
           linkName: "更新",
           linkUrl: "/update",
+          icon: "ion-information",
           className: "btn-success"
         }, {
           linkName: "删除",
           linkUrl: "/delete",
+          icon: "ion-nuclear",
           className: "btn-danger"
         }
       ]

@@ -15,6 +15,8 @@ export class CommonLinkComponent implements OnInit {
   linkName:string = '';
   linkUrl:string = '';
   className:string = '';
+  icon:string = '';
+  size:string = '';
 
   constructor() {
   }
@@ -24,6 +26,8 @@ export class CommonLinkComponent implements OnInit {
       this.linkName = this.link.linkName;
       this.linkUrl = this.link.linkUrl;
       this.className = this.link.className;
+      this.icon = this.link.icon;
+      this.size = this.link.size;
     }
   }
 
