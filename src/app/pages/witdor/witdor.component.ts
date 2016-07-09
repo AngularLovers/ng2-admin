@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { RouteConfig } from '@angular/router-deprecated';
 
-import { IndexComponent,MenusComponent } from './index';
+import { IndexComponent,MenuComponent } from './index';
 
 @Component({
   moduleId: module.id,
@@ -18,7 +18,7 @@ import { IndexComponent,MenusComponent } from './index';
   },
   {
     name: 'WitdorMenus',
-    component: MenusComponent,
+    component: MenuComponent,
     path: '/witdorMenus',
   }
 ])

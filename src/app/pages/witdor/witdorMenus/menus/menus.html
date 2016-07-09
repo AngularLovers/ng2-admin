@@ -1,0 +1,24 @@
+<div class="table-responsive">
+  <table class="table table-hover table-bordered">
+    <tr>
+      <th>#</th>
+      <th>名字</th>
+      <th>职位</th>
+      <th>状态</th>
+      <th>权限</th>
+      <th>操作</th>
+    </tr>
+    <tr *ngFor="let item of smartTableData">
+      <td class="table-id">{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.job }}</td>
+      <td>
+        <button ngClass="{status-button btn btn-xs btn-{{ item.status }}">{{ item.status }}</button>
+      </td>
+      <td>{{ item.power }}</td>
+      <td>
+        <common-operate></common-operate>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -23,7 +23,6 @@ export class CommonLinkComponent implements OnInit {
 
   ngOnInit() {
     if (this.link !== undefined ) {
-      console.log(JSON.stringify(this.link));
       this.linkName = this.link.linkName;
       this.linkUrl = this.link.linkUrl;
       this.className = this.link.className;
