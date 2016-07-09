@@ -6,7 +6,7 @@ import { IndexComponent,MenusComponent } from './index';
 @Component({
   moduleId: module.id,
   selector: 'witdors',
-  template:'<router-outlet></router-outlet>'
+  template:`<router-outlet></router-outlet>`
 })
 
 @RouteConfig([

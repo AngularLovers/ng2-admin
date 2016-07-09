@@ -5,9 +5,9 @@ import { BaPageTop, BaContentTop, BaSidebar, BaBackTop } from '../theme/componen
 
 import { Dashboard } from './dashboard';
 import { Demos } from './demo/demo.component';
+import { Witdors } from './witdor/witdor.component';
 import { Managers } from './manager/manager.component';
 import { AllConcat } from './allConcat/allConcat.component';
-import { Witdors } from './witdor/index';
 import { Test } from './test/test.component';
 
 @Component({
