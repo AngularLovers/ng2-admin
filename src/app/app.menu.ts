@@ -48,14 +48,7 @@ export const menuItems = [
       },
       {
         title: '招聘管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
+        url: '#'
       }
     ]
   },
@@ -144,17 +137,6 @@ export const menuItems = [
         url: '#',
         subMenu: [{
           title: '三级菜单',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
-      },
-      {
-        title: '报价管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
           url: '#',
           disabled: true,
           selected: false,
