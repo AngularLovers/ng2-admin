@@ -32,47 +32,19 @@ export const menuItems = [
       },
       {
         title: '吉祥物管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
+        url: '#'
       },
       {
         title: '报价管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
+        url: '#'
       },
       {
         title: '关于我们管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
+        url: '#'
       },
       {
         title: '流程管理',
-        url: '#',
-        subMenu: [{
-          title: '三级菜单1',
-          url: '#',
-          disabled: true,
-          selected: false,
-          expanded: false
-        }]
+        url: '#'
       },
       {
         title: '招聘管理',
@@ -152,6 +124,45 @@ export const menuItems = [
       },
     ]
   }, {
+    title: '菜单嵌套示例',
+    icon: 'ion-compose',
+    order: 200,
+    subMenu: [
+      {
+        title: '二级菜单',
+        icon: 'ion-compose',
+        subMenu: [{
+          title: '三级菜单',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
+      },
+      {
+        title: '二级菜单',
+        url: '#',
+        subMenu: [{
+          title: '三级菜单',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
+      },
+      {
+        title: '报价管理',
+        url: '#',
+        subMenu: [{
+          title: '三级菜单1',
+          url: '#',
+          disabled: true,
+          selected: false,
+          expanded: false
+        }]
+      },
+    ]
+  },{
     title: '所有联系人管理',
     icon: 'ion-android-exit',
     component: 'AllConcat',
