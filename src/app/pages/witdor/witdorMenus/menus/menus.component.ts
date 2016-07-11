@@ -36,11 +36,13 @@ export class MenusComponent implements OnInit {
         {
           linkUrl: "/update",
           icon: "ion-information",
-          className: "btn-success"
+          className: "btn-success",
+          prompt:"编辑",
         }, {
           linkUrl: "/delete",
           icon: "ion-nuclear",
-          className: "btn-danger"
+          className: "btn-danger",
+          prompt:"编辑",
         }
       ]
     }
