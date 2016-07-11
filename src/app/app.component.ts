@@ -1,16 +1,16 @@
 import './app.loader.ts';
 
-import {Component, ViewEncapsulation} from '@angular/core';
-import {RouteConfig} from '@angular/router-deprecated';
+import { Component, ViewEncapsulation,ViewContainerRef } from '@angular/core';
+import { RouteConfig } from '@angular/router-deprecated';
 
-import {Pages} from './pages';
-import {Login} from './pages/manager/login';
-import {AppState} from './app.state';
-import {BaThemeConfigProvider, BaThemeConfig} from './theme';
-import {BaThemeRun} from './theme/directives';
-import {BaImageLoaderService, BaThemePreloader, BaThemeSpinner} from './theme/services';
+import { Pages } from './pages';
+import { Login } from './pages/manager/login';
+import { AppState } from './app.state';
+import { BaThemeConfigProvider, BaThemeConfig } from './theme';
+import { BaThemeRun } from './theme/directives';
+import { BaImageLoaderService, BaThemePreloader, BaThemeSpinner } from './theme/services';
 
-import {layoutPaths} from './theme/theme.constants';
+import { layoutPaths } from './theme/theme.constants';
 
 /*
  * App Component
@@ -45,8 +45,15 @@ import {layoutPaths} from './theme/theme.constants';
 export class App {
 
   isMenuCollapsed:boolean = false;
+  viewContainerRef:ViewContainerRef;
 
-  constructor(private state:AppState, private imageLoader:BaImageLoaderService, private spinner:BaThemeSpinner, private config:BaThemeConfig) {
+  public constructor(
+                private state:AppState,
+                private imageLoader:BaImageLoaderService,
+                private spinner:BaThemeSpinner,
+                private config:BaThemeConfig,
+                viewContainerRef:ViewContainerRef) {
+    this.viewContainerRef = viewContainerRef;
     this.loadImages();
 
     this.state.subscribe('menu.isCollapsed', (isCollapsed) => {
@@ -55,7 +62,6 @@ export class App {
   }
 
   public ngAfterViewInit():void {
-    // hide spinner once all loaders are completed
     BaThemePreloader.load().then((values) => {
       this.spinner.hide();
     });

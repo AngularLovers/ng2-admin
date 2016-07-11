@@ -28,7 +28,7 @@ export class MenusService {
     "icon": "ion-checkmark-circled",
     "status": "danger"
   },{
-    "id": 4,
+    "id": 5,
     "name": "项目流程",
     "link": "http://witdor.com",
     "icon": "ion-arrow-left-b",
