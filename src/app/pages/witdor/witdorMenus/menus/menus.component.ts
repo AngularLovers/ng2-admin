@@ -26,11 +26,6 @@ export class MenusComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-
-  showOperate(id:number):void {
-    this.currentId = id;
     if(this.links.length<=0){
       this.links=[
         {
@@ -51,7 +46,12 @@ export class MenusComponent implements OnInit {
   }
 
 
-  hideOperate():void {
-    this.currentId = 0;
-  }
+  // showOperate(id:number):void {
+  //
+  // }
+
+
+  // hideOperate():void {
+  //   this.currentId = 0;
+  // }
 }
