@@ -35,10 +35,12 @@ export class MenusComponent implements OnInit {
       this.links=[
         {
           linkUrl: "/update",
+          linkName:"更新",
           icon: "ion-information",
           className: "btn-success"
         }, {
           linkUrl: "/delete",
+          linkName:"删除",
           icon: "ion-nuclear",
           className: "btn-danger"
         }
