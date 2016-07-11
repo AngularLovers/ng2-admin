@@ -17,11 +17,9 @@
         <span ngClass="{btn-{{ item.status }}">{{ item.status }}</span>
       </td>
       <td>
-        <div *ngIf="currentId===item.id">
           <span *ngFor="let item of links" >
               <common-link [link]="item"></common-link>
           </span>
-        </div>
       </td>
     </tr>
   </table>
