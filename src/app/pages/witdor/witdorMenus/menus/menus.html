@@ -6,9 +6,8 @@
       <th>链接</th>
       <th>图标</th>
       <th>状态</th>
-      <th>操作</th>
     </tr>
-    <tr *ngFor="let item of smartTableData">
+    <tr *ngFor="let item of smartTableData"  (mouseenter)="showOperate(item.id)" (mouseleave)="hideOperate()">
       <td class="table-id">{{ item.id }}</td>
       <td>{{ item.name }}</td>
       <td><a href="{{ item.link }}">{{ item.link }}</a></td>
@@ -16,9 +15,11 @@
       <td>
         <button ngClass="{status-button btn btn-xs btn-{{ item.status }}">{{ item.status }}</button>
       </td>
-      <td>
-        <common-operate></common-operate>
-      </td>
+      <div *ngIf="currentId===item.id">
+          <ul style="float: left;" *ngFor="let item of links">
+            <common-link [link]="item"></common-link>
+          </ul>
+      </div>
     </tr>
   </table>
 </div>
