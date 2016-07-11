@@ -8,7 +8,7 @@
       <th>状态</th>
       <th>操作</th>
     </tr>
-    <tr *ngFor="let item of smartTableData"  (mouseenter)="showOperate(item.id)" (mouseleave)="hideOperate()">
+    <tr *ngFor="let item of smartTableData"  (mouseenter)="showOperate(item.id)" (mouseleave)="hideOperate()" (dblclick)="lgModal.show()">
       <td class="table-id">{{ item.id }}</td>
       <td>{{ item.name }}</td>
       <td><a href="{{ item.link }}">{{ item.link }}</a></td>
@@ -29,3 +29,5 @@
     </tr>
   </table>
 </div>
+
+<update-menu></update-menu>
