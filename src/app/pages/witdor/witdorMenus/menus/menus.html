@@ -16,16 +16,13 @@
       <td>
         <span ngClass="{btn-{{ item.status }}">{{ item.status }}</span>
       </td>
-      <td style="text-align: center;">
-        <span style="float: left;" *ngFor="let item of links">
-          <common-link [link]="item"></common-link>
-        </span>
+      <td>
+        <div *ngIf="currentId===item.id">
+          <span *ngFor="let item of links" >
+              <common-link [link]="item"></common-link>
+          </span>
+        </div>
       </td>
-      <!-- <div *ngIf="currentId===item.id">
-          <ul style="float: left;" *ngFor="let item of links">
-            <common-link [link]="item"></common-link>
-          </ul>
-      </div> -->
     </tr>
   </table>
 </div>
