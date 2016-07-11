@@ -2,14 +2,14 @@ import {Component, OnInit} from '@angular/core';
 
 import { BaAppPicturePipe } from '../../../../theme/pipes/index';
 import { MenusService } from './menus.service';
-import { updateMenuComponent } from './../update/index';
+import { MODAL_DIRECTVES, BS_VIEW_PROVIDERS } from 'ng2-bootstrap/ng2-bootstrap';
 import { CommonLinkComponent,LinkModel } from './../../../../theme/components/index';
 
 @Component({
   moduleId: module.id,
   selector: 'witdor-menus',
-  directives:[CommonLinkComponent,updateMenuComponent],
-  providers: [MenusService],
+  directives:[CommonLinkComponent,MODAL_DIRECTVES],
+  providers: [MenusService,BS_VIEW_PROVIDERS],
   pipes: [BaAppPicturePipe],
   styles:[require('./menus.scss')],
   template: require('./menus.html')
