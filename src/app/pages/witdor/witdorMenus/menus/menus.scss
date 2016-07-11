@@ -13,3 +13,15 @@ span{
   display: inline-block;
   text-align: center;
 }
+
+td,th{
+  text-align: center;
+}
+
+input[placeholder], [placeholder], *[placeholder] {
+  color: pink;
+}
+
+input {
+  border: 1px solid #ccc;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import {MODAL_DIRECTVES, BS_VIEW_PROVIDERS} from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
@@ -9,6 +9,12 @@ import {MODAL_DIRECTVES, BS_VIEW_PROVIDERS} from 'ng2-bootstrap/ng2-bootstrap';
   styles:[require('./modal.scss')],
 })
 
-export class CommonModalComponent {
+export class CommonModalComponent implements OnInit{
+
+  title:string;
+
+  ngOnInit() {
+    this.title = "修改菜单";
+  }
 
 }
