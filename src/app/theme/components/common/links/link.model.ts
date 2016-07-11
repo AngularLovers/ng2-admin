@@ -4,4 +4,5 @@ export interface LinkModel{
   icon?:string; //链接图标
   size?:string; //链接的大小
   className?:string; //链接的样式
+  operate?:string; //操作
 }

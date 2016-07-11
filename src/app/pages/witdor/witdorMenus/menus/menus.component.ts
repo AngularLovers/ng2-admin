@@ -18,8 +18,6 @@ export class MenusComponent implements OnInit {
 
 
   links:LinkModel[]=[];
-  currentId:number = 0;
-
   smartTableData:Array<any>;
 
   constructor(private menuService:MenusService) {
@@ -27,30 +25,14 @@ export class MenusComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.links=[
+      {
+        operate: "/delete",
+        linkName:"删除",
+        icon: "ion-nuclear",
+        className: "btn-default"
+      }
+    ]
   }
 
-
-  showOperate(id:number):void {
-    this.currentId = id;
-    if(this.links.length<=0){
-      this.links=[
-        {
-          linkUrl: "/update",
-          linkName:"更新",
-          icon: "ion-information",
-          className: "btn-success"
-        }, {
-          linkUrl: "/delete",
-          linkName:"删除",
-          icon: "ion-nuclear",
-          className: "btn-danger"
-        }
-      ]
-    }
-  }
-
-
-  hideOperate():void {
-    this.currentId = 0;
-  }
 }
