@@ -6,6 +6,7 @@
       <th>链接</th>
       <th>图标</th>
       <th>状态</th>
+      <th>操作</th>
     </tr>
     <tr *ngFor="let item of smartTableData"  (mouseenter)="showOperate(item.id)" (mouseleave)="hideOperate()" (dblclick)="lgModal.show()">
       <td class="table-id">{{ item.id }}</td>
@@ -13,13 +14,18 @@
       <td><a href="{{ item.link }}">{{ item.link }}</a></td>
       <td><i class="{{ item.icon }}"></i></td>
       <td>
-        <button ngClass="{status-button btn btn-xs btn-{{ item.status }}">{{ item.status }}</button>
+        <span ngClass="{btn-{{ item.status }}">{{ item.status }}</span>
       </td>
-      <div *ngIf="currentId===item.id">
+      <td style="text-align: center;">
+        <span style="float: left;" *ngFor="let item of links">
+          <common-link [link]="item"></common-link>
+        </span>
+      </td>
+      <!-- <div *ngIf="currentId===item.id">
           <ul style="float: left;" *ngFor="let item of links">
             <common-link [link]="item"></common-link>
           </ul>
-      </div>
+      </div> -->
     </tr>
   </table>
 </div>
