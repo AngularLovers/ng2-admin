@@ -14,17 +14,21 @@
       <td><a href="{{ item.link }}">{{ item.link }}</a></td>
       <td><i class="{{ item.icon }}"></i></td>
       <td>
-        <span ngClass="{btn-{{ item.status }}">{{ item.status }}</span>
+        <span class="{{ item.statusIcon }}">{{ item.status }}</span>
       </td>
-      <td>
-          <span *ngFor="let item of links" >
-              <common-link [link]="item"></common-link>
-          </span>
+      <td style="text-align: center;">
+        <span style="float: left;" *ngFor="let item of links">
+          <common-link [link]="item"></common-link>
+        </span>
       </td>
+      <!-- <div *ngIf="currentId===item.id">
+          <ul style="float: left;" *ngFor="let item of links">
+            <common-link [link]="item"></common-link>
+          </ul>
+      </div> -->
     </tr>
   </table>
 </div>
-
 <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -55,4 +59,3 @@
     </div>
   </div>
 </div>
-

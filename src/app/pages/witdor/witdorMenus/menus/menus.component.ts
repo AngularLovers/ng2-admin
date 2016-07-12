@@ -25,13 +25,32 @@ export class MenusComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.links=[
-      {
-        operate: "/delete",
-        linkName:"删除",
-        icon: "ion-nuclear",
-        className: "btn-default"
-      }
-    ]
+
+    if(this.links.length<=0){
+      this.links=[
+        {
+          linkUrl: "/update",
+          linkName:"编辑",
+          icon: "ion-edit",
+          className: "btn-info",
+        }, {
+          linkUrl: "/delete",
+          linkName:"删除",
+          icon: "ion-close-round",
+          className: "btn-danger",
+        }
+      ]
+    }
   }
+
+
+  // showOperate(id:number):void {
+  //
+  // }
+
+
+  // hideOperate():void {
+  //   this.currentId = 0;
+  // }
+
 }

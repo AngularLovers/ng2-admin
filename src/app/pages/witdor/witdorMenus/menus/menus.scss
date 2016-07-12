@@ -12,10 +12,39 @@ span{
   width: 50%;
   display: inline-block;
   text-align: center;
+  height: auto;
+
 }
 
-td,th{
+.primary{
+color:#00abff;
+}
+a{
+  color:#fff;
+  cursor: pointer;
+}
+a:hover{
+  color: #40daf1;
+}
+a:hover{
+  color: darken(#40daf1,20%);
+}
+.success{
+  color: #8bd22f;
+}
+.info{
+  color: #40daf1;
+}
+.warning{
+  color: #e7ba08;
+}.danger{
+  color: #f95372;
+}
+table{
   text-align: center;
+  th,td{
+    text-align: center;
+  }
 }
 
 input[placeholder], [placeholder], *[placeholder] {
@@ -24,4 +53,5 @@ input[placeholder], [placeholder], *[placeholder] {
 
 input {
   border: 1px solid #ccc;
+
 }
