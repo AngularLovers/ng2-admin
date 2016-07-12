@@ -5,5 +5,4 @@ export interface LinkModel{
   size?:string; //链接的大小
   className?:string; //链接的样式
   operate?:string; //操作
-  prompt?:string;
 }
