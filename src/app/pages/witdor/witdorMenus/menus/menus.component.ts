@@ -45,15 +45,4 @@ export class MenusComponent implements OnInit {
       ]
     }
   }
-
-
-  // showOperate(id:number):void {
-  //
-  // }
-
-
-  // hideOperate():void {
-  //   this.currentId = 0;
-  // }
-
 }
