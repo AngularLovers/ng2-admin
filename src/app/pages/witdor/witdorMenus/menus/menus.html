@@ -11,8 +11,8 @@
       <th>状态</th>
       <th>操作</th>
     </tr>
-    <tr *ngFor="let item of smartTableData" (dblclick)="lgModal.show()">
-      <td class="table-id">{{ item.id }}</td>
+    <tr *ngFor="let item of smartTableData;let index = index " (dblclick)="lgModal.show()">
+      <td class="table-id">{{ index+1}}</td>
       <td>{{ item.name }}</td>
       <td><a href="{{ item.link }}">{{ item.link }}</a></td>
       <td><i class="{{ item.icon }}"></i></td>
