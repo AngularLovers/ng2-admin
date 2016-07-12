@@ -1,12 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 
-import { ConcatComponent } from './index';
-import { CommonModalComponent } from './../../theme/components/index';
+import { CommonPaginationComponent } from './../../theme/components/index';
 
 @Component({
   moduleId: module.id,
   selector: 'test',
-  directives:[ConcatComponent,CommonModalComponent],
+  directives:[CommonPaginationComponent],
   template: require( './test.html')
 })
 export class Test implements OnInit {
