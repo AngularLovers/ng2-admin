@@ -7,3 +7,4 @@ export * from './operate/index'
 export * from './links/index';
 export * from './modals/index';
 export * from './pages/index';
+export * from './searches/index';
