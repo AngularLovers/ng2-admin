@@ -14,7 +14,7 @@
       <td><a href="{{ item.link }}">{{ item.link }}</a></td>
       <td><i class="{{ item.icon }}"></i></td>
       <td>
-        <span ngClass="{btn-{{ item.status }}">{{ item.status }}</span>
+        <span class="{{ item.statusIcon }}">{{ item.status }}</span>
       </td>
       <td style="text-align: center;">
         <span style="float: left;" *ngFor="let item of links">
