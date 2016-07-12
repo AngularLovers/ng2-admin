@@ -17,6 +17,7 @@ export class CommonLinkComponent implements OnInit {
   className:string = '';
   icon:string = '';
   size:string = '';
+  operate:string = '';
 
   constructor() {
   }
@@ -28,6 +29,8 @@ export class CommonLinkComponent implements OnInit {
       this.className = this.link.className;
       this.icon = this.link.icon;
       this.size = this.link.size;
+      this.operate = this.link.operate;
+      console.log(this.operate);
     }
   }
 

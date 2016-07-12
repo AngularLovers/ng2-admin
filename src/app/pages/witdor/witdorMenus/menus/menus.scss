@@ -12,7 +12,10 @@ span{
   width: 50%;
   display: inline-block;
   text-align: center;
+  height: auto;
+
 }
+
 .primary{
 color:#00abff;
 }
@@ -39,7 +42,16 @@ a:hover{
 }
 table{
   text-align: center;
-  th{
+  th,td{
     text-align: center;
   }
+}
+
+input[placeholder], [placeholder], *[placeholder] {
+  color: pink;
+}
+
+input {
+  border: 1px solid #ccc;
+
 }
