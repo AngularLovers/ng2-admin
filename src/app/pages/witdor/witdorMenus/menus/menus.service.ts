@@ -1,9 +1,10 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
+import { MenusModel } from './menus.model';
 
 @Injectable()
 export class MenusService {
 
-  smartTableData = [{
+  smartTableData:MenusModel[]= [{
       "id": 1,
       "name": "首页",
       "link": "http://witdor.com",

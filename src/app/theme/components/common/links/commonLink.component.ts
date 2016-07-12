@@ -30,7 +30,6 @@ export class CommonLinkComponent implements OnInit {
       this.icon = this.link.icon;
       this.size = this.link.size;
       this.operate = this.link.operate;
-      console.log(this.operate);
     }
   }
 
