@@ -1,8 +1,12 @@
 <!-- 搜索框 -->
-<div class="form-group">
+<div class="form-group search-position">
   <input class="form-control widthSize"
-         *ngIf="config.filtering" placeholder="搜索...."
-         [ngTableFiltering]="config.filtering"
+         *ngIf="config.filtering" placeholder="名字...."
+         [ngTableFiltering]="config.filtering.name"
+         (tableChanged)="onChangeTable(config)"/>
+  <input class="form-control widthSize"
+         *ngIf="config.filtering" placeholder="状态...."
+         [ngTableFiltering]="config.filtering.status"
          (tableChanged)="onChangeTable(config)"/>
 </div>
 <!--  表格  -->
