@@ -1,0 +1,58 @@
+<!-- 搜索框 -->
+<div class="form-group">
+  <input class="form-control widthSize"
+         *ngIf="config.filtering" placeholder="搜索...."
+         [ngTableFiltering]="config.filtering"
+         (tableChanged)="onChangeTable(config)"/>
+</div>
+<!--  表格  -->
+<ng-table [config]="config.sorting"
+          (tableChanged)="onChangeTable(config)"
+          [rows]="rows"
+          [columns]="columns">
+</ng-table>
+<!-- 分页 -->
+<div class="container page-position">
+    <pagination *ngIf="config.paging"
+                class="pagination-sm"
+                [(ngModel)]="page"
+                [totalItems]="length"
+                [itemsPerPage]="itemsPerPage"
+                [maxSize]="maxSize"
+                [boundaryLinks]="true"
+                [rotate]="false"
+                (pageChanged)="onChangeTable(config, $event)"
+                (numPages)="numPages = $event">
+    </pagination>
+</div>
+
+<!--<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">-->
+  <!--<div class="modal-dialog modal-lg">-->
+    <!--<div class="modal-content">-->
+      <!--<div class="modal-header">-->
+        <!--<button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">-->
+          <!--<span aria-hidden="true">&times;</span>-->
+        <!--</button>-->
+        <!--<h4 class="modal-title">{{title}}</h4>-->
+      <!--</div>-->
+      <!--<div class="modal-body">-->
+        <!--<form>-->
+          <!--<div class="form-group">-->
+            <!--<input type="text" class="form-control" placeholder="名字">-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<input type="text" class="form-control" placeholder="链接">-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<input type="text" class="form-control" placeholder="图标">-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<input type="text" class="form-control" placeholder="状态">-->
+          <!--</div>-->
+          <!--<button type="submit" class="btn btn-success">保存</button>-->
+          <!--<button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">取消</button>-->
+        <!--</form>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
