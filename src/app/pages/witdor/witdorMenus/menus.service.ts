@@ -1,9 +1,10 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
+import { MenusModel } from './menus.model';
 
 @Injectable()
 export class MenusService {
 
-  smartTableData = [{
+  smartTableData:MenusModel[]= [{
       "id": 1,
       "name": "首页",
       "link": "http://witdor.com",
@@ -43,69 +44,6 @@ export class MenusService {
     "name": "招贤纳士",
     "link": "http://witdor.com",
     "icon": "ion-arrow-right-b",
-    "statusIcon": "danger",
-    "status":"删除"
-  },{
-    "id": 7,
-    "name": "关于我们",
-    "link": "http://witdor.com",
-    "icon": "ion-arrow-down-b",
-    "statusIcon": "danger",
-    "status":"删除"
-  },{
-    "id": 7,
-    "name": "关于我们",
-    "link": "http://witdor.com",
-    "icon": "ion-arrow-down-b",
-    "statusIcon": "danger",
-    "status":"删除"
-  },{
-    "id": 7,
-    "name": "关于我们",
-    "link": "http://witdor.com",
-    "icon": "ion-arrow-down-b",
-    "statusIcon": "danger",
-    "status":"删除"
-  },{
-    "id": 7,
-    "name": "关于我们",
-    "link": "http://witdor.com",
-    "icon": "ion-arrow-down-b",
-    "statusIcon": "danger",
-    "status":"删除"
-  },{
-    "id": 7,
-    "name": "关于我们",
-    "link": "http://witdor.com",
-    "icon": "ion-arrow-down-b",
-    "statusIcon": "danger",
-    "status":"删除"
-  },{
-    "id": 7,
-    "name": "关于我们",
-    "link": "http://witdor.com",
-    "icon": "ion-arrow-down-b",
-    "statusIcon": "danger",
-    "status":"删除"
-  },{
-    "id": 7,
-    "name": "关于我们",
-    "link": "http://witdor.com",
-    "icon": "ion-arrow-down-b",
-    "statusIcon": "danger",
-    "status":"删除"
-  },{
-    "id": 7,
-    "name": "关于我们",
-    "link": "http://witdor.com",
-    "icon": "ion-arrow-down-b",
-    "statusIcon": "danger",
-    "status":"删除"
-  },{
-    "id": 7,
-    "name": "关于我们",
-    "link": "http://witdor.com",
-    "icon": "ion-arrow-down-b",
     "statusIcon": "danger",
     "status":"删除"
   },{
