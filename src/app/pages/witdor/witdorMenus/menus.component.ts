@@ -44,7 +44,11 @@ export class MenuComponent implements OnInit {
   public config:any = {
     paging: true, //是否排序
     sorting: {columns: this.columns}, //排序规则
-    filtering: {filterString: '', columnName: 'name'} //过滤器
+    filtering: {
+      name: { filterString: '' },
+      status: { filterString: '' }
+    } //过滤器
+
   };
 
 
@@ -120,9 +124,10 @@ export class MenuComponent implements OnInit {
       return data;
     }
 
-    let filteredData:MenusModel[] = data.filter((item:MenusModel) =>
-      item[config.filtering.columnName].match(this.config.filtering.filterString));
-    return filteredData;
+    return data.filter((item:any) =>
+    item["name"].match(this.config.filtering.name.filterString) &&
+    item["status"].match(this.config.filtering.status.filterString));
+
   }
 
   /**
