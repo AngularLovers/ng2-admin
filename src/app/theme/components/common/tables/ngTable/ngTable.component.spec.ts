@@ -1,4 +1,4 @@
-import { it, expect, describe, inject, beforeEachProviders} from '@angular/core/testing';
+import { it, expect, describe, inject, beforeEachProviders } from '@angular/core/testing';
 import { ComponentFixture } from '@angular/compiler/testing';
 import { NgTableComponent } from './ngTable.component';
 

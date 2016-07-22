@@ -1,4 +1,4 @@
-import {Directive, EventEmitter, ElementRef, Renderer, HostListener, Input, Output} from '@angular/core';
+import { Directive, EventEmitter, ElementRef, Renderer, HostListener, Input, Output } from '@angular/core';
 
 // import {setProperty} from 'angular2/ts/src/core/forms/directives/shared';
 function setProperty(renderer:Renderer, elementRef:ElementRef, propName:string, propValue:any):void {
@@ -11,27 +11,27 @@ export class NgTableFilteringDirective {
     filterString: '',
     columnName: 'name'
   };
-
+  
   @Output() public tableChanged:EventEmitter<any> = new EventEmitter();
-
+  
   @Input()
   public get config():any {
     return this.ngTableFiltering;
   }
-
+  
   public set config(value:any) {
     this.ngTableFiltering = value;
   }
-
+  
   private element:ElementRef;
   private renderer:Renderer;
-
+  
   @HostListener('input', ['$event.target.value'])
   public onChangeFilter(event:any):void {
     this.ngTableFiltering.filterString = event;
     this.tableChanged.emit({filtering: this.ngTableFiltering});
   }
-
+  
   public constructor(element:ElementRef, renderer:Renderer) {
     this.element = element;
     this.renderer = renderer;

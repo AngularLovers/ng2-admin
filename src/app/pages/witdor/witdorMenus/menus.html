@@ -11,9 +11,9 @@
 </div>
 <!--  表格  -->
 <ng-table [config]="config.sorting"
-          (tableChanged)="onChangeTable(config)"
           [rows]="rows"
           [columns]="columns">
+          (tableChanged)="onChangeTable(config)"
 </ng-table>
 <!-- 分页 -->
 <div class="container page-position">
