@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MenusModel } from './menus.model';
+import { Logger } from './../../../theme/services/index';
 
 @Injectable()
 export class MenusService {
@@ -119,6 +120,10 @@ export class MenusService {
   }
   ];
 
-  constructor() {
+  constructor(private logger:Logger) {
+    logger.debug('debug level');
+    logger.info('info level');
+    logger.warn('warn level');
+    logger.error('error level');
   }
 }
