@@ -121,9 +121,9 @@ export class MenusService {
   ];
 
   constructor(private logger:Logger) {
-    logger.debug('debug level');
-    logger.info('info level');
-    logger.warn('warn level');
-    logger.error('error level');
+    // logger.debug('debug level');
+    // logger.info('info level');
+    // logger.warn('warn level');
+    // logger.error('error level');
   }
 }

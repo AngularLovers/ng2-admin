@@ -1,5 +1,6 @@
 <aside class="al-sidebar" (mouseleave)="hoverElemTop=outOfArea" sidebarResize>
-  <ul id="al-sidebar-list" class="al-sidebar-list" baSlimScroll [baSlimScrollOptions]="{height: menuHeight}">
+  <span *ngIf="menuItems">
+    <ul id="al-sidebar-list" class="al-sidebar-list" baSlimScroll [baSlimScrollOptions]="{height: menuHeight}">
     <li *ngFor="let item of menuItems" class="al-sidebar-list-item"
         [ngClass]="{'selected': item.selected && !item.expanded, 'with-sub-menu': item.subMenu, 'ba-sidebar-item-expanded': item.expanded}">
 
@@ -50,6 +51,7 @@
 
     </li>
   </ul>
+  </span>
   <div class="sidebar-hover-elem" [ngStyle]="{top: hoverElemTop + 'px', height: hoverElemHeight + 'px'}"
        [ngClass]="{'show-hover-elem': showHoverElem }"></div>
 </aside>
