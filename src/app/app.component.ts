@@ -8,7 +8,7 @@ import { Login } from './pages/manager/login';
 import { AppState } from './app.state';
 import { BaThemeConfigProvider, BaThemeConfig } from './theme';
 import { BaThemeRun } from './theme/directives';
-import { BaImageLoaderService, BaThemePreloader, BaThemeSpinner } from './theme/services';
+import { BaImageLoaderService, BaThemePreloader, BaThemeSpinner,Logger } from './theme/services';
 
 import { layoutPaths } from './theme/theme.constants';
 
@@ -20,7 +20,7 @@ import { layoutPaths } from './theme/theme.constants';
   selector: 'app',
   pipes: [],
   directives: [BaThemeRun],
-  providers: [BaThemeConfigProvider, BaThemeConfig, BaImageLoaderService, BaThemeSpinner],
+  providers: [BaThemeConfigProvider, BaThemeConfig, BaImageLoaderService, BaThemeSpinner,Logger],
   encapsulation: ViewEncapsulation.None,
   styles: [require('normalize.css'), require('./app.scss')],
   template: require('./app.html')

@@ -13,6 +13,14 @@ import { NgTableSortingDirective } from './ngTable-sorting.directive';
  * 通用表格组件
  */
 export class NgTableComponent {
+  
+  /**
+   * 行
+   * @type {Array}
+   * @private
+   */
+  private _columns:Array<any> = [];
+  
   // 父级组件传过来的数据
   @Input() public rows:Array<any> = []; //列
   @Input() public config:any = {}; // 配置
@@ -57,13 +65,6 @@ export class NgTableComponent {
     
     return {columns: sortColumns};
   }
-  
-  /**
-   * 行
-   * @type {Array}
-   * @private
-     */
-  private _columns:Array<any> = [];
   
   /**
    * 表格数据变化
