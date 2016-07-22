@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="http://static.xiaomo.info/jquery.js"></script>
+</head>
+<body>
+<script>
+  $.ajax({
+    url:'http://aliceprincess.oss-cn-shanghai.aliyuncs.com/menu.json',
+    method:'GET',
+    dataType:'json',
+    success:function (data) {
+      alert(JSON.stringify(data));
+    }
+  });
+
+</script>
+</body>
+</html>

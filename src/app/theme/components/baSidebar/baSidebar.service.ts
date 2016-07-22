@@ -1,18 +1,34 @@
 import { Injectable } from '@angular/core';
-import { menuItems } from '../../../app.menu';
+import { Http } from "@angular/http";
+import { menuUrl } from './../../../api';
+import { Menu } from "./../../../app.menu";
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class BaSidebarService {
-
+  
+  constructor(private http:Http){}
+  
   private router;
-
+  
+  
+  private handleError(error: any) {
+    console.error('An error occurred', error);
+    return Promise.reject(error.message || error);
+  }
+  
   /**
    * 获取全部菜单
    * @returns {{title: string, component: string, icon: string, selected: boolean, expanded: boolean, order: number}|{title: string, icon: string, selected: boolean, expanded: boolean, order: number, subMenu: {title: string, url: string, subMenu: {title: string, url: string, disabled: boolean, selected: boolean, expanded: boolean}[]}[]}|{title: string, component: string, icon: string, order: number, subMenu: {title: string, component: string}|{title: string, component: string, url: string}[]}|{title: string, url: string, icon: string, order: number, subMenu: {title: string, url: string, disabled: boolean, selected: boolean, expanded: boolean}[]}[]}
      */
-  public getMenuItems():Array<Object> {
-    return menuItems;
-  }
+  public getMenuItems():Promise<Menu[]> {
+    return this.http.get(menuUrl)
+      .toPromise()
+      .then(response=>{
+        return response.json();
+      })
+      .catch(this.handleError);
+    };
 
   /**
    * 设置路由
