@@ -15,4 +15,3 @@
 
 export const menuUrl = 'http://aliceprincess.oss-cn-shanghai.aliyuncs.com/menu.json';
 export const witdorMenuUrl = 'http://aliceprincess.oss-cn-shanghai.aliyuncs.com/witDorMenu.json';
-

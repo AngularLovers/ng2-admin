@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component,ElementRef, OnInit} from '@angular/core';
 import { CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass, NgIf} from '@angular/common';
 import { PAGINATION_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
 import { NG_TABLE_DIRECTIVES} from './../../../theme/components/index';
 import { MenusService } from './menus.service';
 import { MenusModel } from './menus.model';
-
+import { Logger } from './../../../theme/services/index';
+import { AppState } from '../../../app.state';
 let template = require('./menus.html');
 
 @Component({
@@ -52,18 +53,26 @@ export class MenuComponent implements OnInit {
   };
 
 
-  public constructor(public menusService:MenusService) {
-  }
 
-  /**
-   * init
-   */
+  constructor(
+    private logger:Logger,
+    private elementRef:ElementRef,
+    // private router:Router,
+    private menusService:MenusService,
+    private state:AppState
+  ) {
+    this.menusService.getMenuItems().then(menItem=>{
+      this.logger.info(menItem);
+      this.data = menItem;
+      this.length = this.data.length;
+      this.onChangeTable(this.config);
+
+    });
+
+  }
   public ngOnInit():void {
-    this.data = this.menusService.smartTableData;
-    this.length = this.data.length;
-    this.onChangeTable(this.config);
+  
   }
-
   /**
    * 跳页
    * @param page

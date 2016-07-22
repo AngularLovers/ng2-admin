@@ -1,74 +1,65 @@
-
 .groupBox {
   position: absolute;
   // z-index: 999;
-
-
 }
 .operationBtn {
   margin-left: 0.5em;
 }
-span{
+span {
   width: 50%;
   display: inline-block;
   text-align: center;
   height: auto;
-
 }
-
-.primary{
-color:#00abff;
+.primary {
+  color: #00abff;
 }
-a{
-  color:#fff;
+a {
+  color: #fff;
   cursor: pointer;
 }
-a:hover{
+a:hover {
   color: #40daf1;
 }
-a:hover{
+a:hover {
   color: darken(#40daf1,20%);
 }
-.success{
+.success {
   color: #8bd22f;
 }
-.info{
+.info {
   color: #40daf1;
 }
-.warning{
+.warning {
   color: #e7ba08;
-}.danger{
+}
+.danger {
   color: #f95372;
 }
-table{
+table {
   text-align: center;
-  th,td{
+  td,
+  th {
     text-align: center;
   }
 }
-
-input[placeholder], [placeholder], *[placeholder] {
+*[placeholder],
+[placeholder],
+input[placeholder] {
   color: pink;
 }
-
 input {
   border: 1px solid #ccc;
-
 }
-
-.page-position{
-  margin-left:400px;
-  margin-top:30px;
+.page-position {
+  margin: 30px auto auto;
+  text-align: center;
 }
-
-.search-position{
+.search-position {
   float: right;
 }
-.widthSize{
-  float:left;
-  margin-left:30px;
-  width:300px;
-}
-.page-position{
-  margin-left: 500px;
+.widthSize {
+  float: left;
+  margin-left: 30px;
+  width: 300px;
 }

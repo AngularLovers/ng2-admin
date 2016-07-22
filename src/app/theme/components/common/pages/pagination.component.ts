@@ -8,7 +8,8 @@ let template = require('./pagination.html');
 @Component({
   selector: 'common-pagination',
   directives: [PAGINATION_DIRECTIVES, FORM_DIRECTIVES, CORE_DIRECTIVES],
-  template: template
+  template: template,
+  styles:[require('./pagination.scss')],
 })
 export class CommonPaginationComponent {
   @Input() totalItems:number;
