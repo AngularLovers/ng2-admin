@@ -7,21 +7,21 @@
 <ng-table [config]="config.sorting" [rows]="rows" [columns]="columns">
   (tableChanged)="onChangeTable(config)"
 </ng-table>
-<!-- 分页 -->
-<!--<div class="container page-position">-->
-  <!--<pagination-->
-    <!--*ngIf="config.paging"-->
-    <!--class="pagination-sm"-->
-    <!--[(ngModel)]="page"-->
-    <!--[totalItems]="length"-->
-    <!--[itemsPerPage]="itemsPerPage"-->
-    <!--[maxSize]="maxSize"-->
-    <!--[boundaryLinks]="true"-->
-    <!--[rotate]="false"-->
-    <!--(pageChanged)="onChangeTable(config, $event)"-->
-    <!--(numPages)="numPages = $event"-->
-    <!--previousText="首页"-->
-    <!--nextText="下一页"-->
-    <!--firstText="第一页"-->
-    <!--lastText="尾页"></pagination>-->
-<!--</div>-->
+ <!--分页-->
+<div class="container page-position">
+  <pagination
+    *ngIf="config.paging"
+    class="pagination-sm"
+    [(ngModel)]="page"
+    [totalItems]="length"
+    [itemsPerPage]="itemsPerPage"
+    [maxSize]="maxSize"
+    [boundaryLinks]="true"
+    [rotate]="false"
+    (pageChanged)="onChangeTable(config, $event)"
+    (numPages)="numPages = $event"
+    previousText="首页"
+    nextText="下一页"
+    firstText="第一页"
+    lastText="尾页"></pagination>
+</div>
