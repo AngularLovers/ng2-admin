@@ -1,12 +1,15 @@
-<span (mouseenter)="showOperate()" (mouseleave)="hideOperate()" class="link-group">
+  <!-- <span (mouseenter)="showOperate()" (mouseleave)="hideOperate()" class="link-group">
 
-  <button class="btn btn-default operationBtn">
+<button class="btn btn-default operationBtn">
     操作
   </button>
 
   <div *ngIf="flag" class="groupBox">
     <ul class="list-group" *ngFor="let item of links">
-      <common-link [link]="item"></common-link>
+
     </ul>
   </div>
-</span>
+</span>-->
+<div class="list-group" *ngFor="let item of links">
+<common-link [link]="item"></common-link>
+</div>

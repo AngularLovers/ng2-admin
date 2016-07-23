@@ -255,6 +255,22 @@ export class AdminService {
     {id: 3, text: 'vip'},
     {id: 4, text: 'admin'}
   ];
+permissions=[
+  {
+    "id":1,
+    "name":"超级管理员",
+    "permission":[
+      {
+        "id":1,
+        "name":"维度后台管理"
+      },{
+        "id":2,
+        "name":"维度官网管理"
+      }
+    ]
+  }
+]
+
 
   constructor() {
     this.editableTableData = this.smartTableData.slice(0, 36);
