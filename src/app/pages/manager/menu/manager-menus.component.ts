@@ -2,10 +2,10 @@ import {Component, OnInit} from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  selector: 'menus',
-  template: require('./menus.html')
+  selector: 'manager-menus',
+  template: require('./manager-menus.html')
 })
-export class MenusComponent implements OnInit {
+export class ManagerMenusComponent implements OnInit {
 
   constructor() {
   }

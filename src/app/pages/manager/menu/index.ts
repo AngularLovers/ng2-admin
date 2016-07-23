@@ -1,1 +1,1 @@
-export * from './menus/index';
+export * from './manager-menus.component';

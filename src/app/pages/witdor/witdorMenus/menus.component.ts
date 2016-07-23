@@ -1,24 +1,22 @@
-import {Component,ElementRef, OnInit} from '@angular/core';
-import { CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass, NgIf} from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
 import { PAGINATION_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
-import { NG_TABLE_DIRECTIVES} from './../../../theme/components/index';
+import { NG_TABLE_DIRECTIVES } from './../../../theme/components/index';
 import { MenusService } from './menus.service';
 import { MenusModel } from './menus.model';
 import { Logger } from './../../../theme/services/index';
-import { AppState } from '../../../app.state';
 let template = require('./menus.html');
 
 @Component({
   selector: 'witdor-menus',
   template: template,
-  styles:[require('./menus.scss')],
-  directives: [NG_TABLE_DIRECTIVES, PAGINATION_DIRECTIVES, NgClass, NgIf, CORE_DIRECTIVES, FORM_DIRECTIVES],
-  providers:[MenusService]
+  styles: [require('./menus.scss')],
+  directives: [NG_TABLE_DIRECTIVES, PAGINATION_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES],
+  providers: [MenusService]
 })
-export class MenuComponent implements OnInit {
+export class WitdorMenuComponent implements OnInit {
   // 列
-  public rows:MenusModel[] = [
-  ];
+  public rows:MenusModel[] = [];
   // 行
   public columns:Array<any> = [
     {title: 'id', name: 'id'},
@@ -30,7 +28,7 @@ export class MenuComponent implements OnInit {
   ];
 
   // 从后端获取的数据
-  public data:MenusModel[] =[]; //数据内容
+  public data:MenusModel[] = []; //数据内容
 
   public page:number = 1; // 页码
   public itemsPerPage:number = 10; //每页条数
@@ -41,27 +39,21 @@ export class MenuComponent implements OnInit {
   /**
    * 配置
    * @type {{paging: boolean, sorting: {columns: Array<any>}, filtering: {filterString: string, columnName: string}}}
-     */
+   */
   public config:any = {
     paging: true, //是否排序
     sorting: {columns: this.columns}, //排序规则
     filtering: {
-      name: { filterString: '' },
-      status: { filterString: '' }
+      name: {filterString: ''},
+      status: {filterString: ''}
     } //过滤器
 
   };
 
 
-
-  constructor(
-    private logger:Logger,
-    private elementRef:ElementRef,
-    // private router:Router,
-    private menusService:MenusService,
-    private state:AppState
-  ) {
-    this.menusService.getMenuItems().then(menItem=>{
+  constructor(private logger:Logger,
+              private menusService:MenusService) {
+    this.menusService.getMenuItems().then(menItem=> {
       this.logger.info(menItem);
       this.data = menItem;
       this.length = this.data.length;
@@ -70,15 +62,17 @@ export class MenuComponent implements OnInit {
     });
 
   }
+
   public ngOnInit():void {
-  
+
   }
+
   /**
    * 跳页
    * @param page
    * @param data
    * @returns {MenusModel[]}
-     */
+   */
   public changePage(page:any, data:MenusModel[] = this.data):Array<any> {
     let start = (page.page - 1) * page.itemsPerPage;
     let end = page.itemsPerPage > -1 ? (start + page.itemsPerPage) : data.length;
@@ -90,7 +84,7 @@ export class MenuComponent implements OnInit {
    * @param data
    * @param config
    * @returns {any}
-     */
+   */
   public changeSort(data:any, config:any):any {
     if (!config.sorting) {
       return data;
@@ -127,7 +121,7 @@ export class MenuComponent implements OnInit {
    * @param data
    * @param config
    * @returns {any}
-     */
+   */
   public changeFilter(data:MenusModel[], config:any):any {
     if (!config.filtering) {
       return data;
@@ -143,7 +137,7 @@ export class MenuComponent implements OnInit {
    * 数据变化
    * @param config
    * @param page
-     */
+   */
   public onChangeTable(config:any, page:any = {page: this.page, itemsPerPage: this.itemsPerPage}):any {
     if (config.filtering) {
       Object.assign(this.config.filtering, config.filtering); //合并对象,把config.filtering合并到this.config.filtering

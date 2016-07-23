@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { RouteConfig } from '@angular/router-deprecated';
 
-import { AdminsComponent ,MenusComponent } from './index';
+import { AdminsComponent ,ManagerMenusComponent } from './index';
 
 @Component({
   moduleId: module.id,
@@ -18,7 +18,7 @@ import { AdminsComponent ,MenusComponent } from './index';
   },
   {
     name: 'Menus',
-    component: MenusComponent,
+    component: ManagerMenusComponent,
     path: '/menus',
   }
 ])
